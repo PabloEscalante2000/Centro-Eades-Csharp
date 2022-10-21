@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "t5CtnjsfyTGIfw+DowF/Fp53Xp/ol5QGD0OyqCh6npKfWOwWtjXinuJK51PV82W5JaLnQ5esZnvwolEJbCIYeg==",
+  "dgSpecHash": "pYw1Hps1XQJn+Ft0asHnhTjaeJX9xHsUeZutS2denPQkr1hIgz0YHTbc8IkNdr5et9mCFO8HboWAFOfaxd2dhA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\USUARIO\\CURSOS_DE_PROGRAMACION\\Curso_Aplicaciones_I\\ProyCentro-Eades\\CentroEades_ADO\\CentroEades_ADO.csproj",
+  "projectFilePath": "D:\\ISIL CARRERA CONTINUACION\\GITHUB_DESKTOP\\CentroEadesDemo\\Centro-Eades-Csharp\\CentroEades_ADO\\CentroEades_ADO.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USUARIO\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\USUARIO\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
