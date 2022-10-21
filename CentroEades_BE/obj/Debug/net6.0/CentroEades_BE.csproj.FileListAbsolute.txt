@@ -10,3 +10,15 @@ C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\ProyCentro-Eades\Ce
 C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\ProyCentro-Eades\CentroEades_BE\obj\Debug\net6.0\refint\CentroEades_BE.dll
 C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\ProyCentro-Eades\CentroEades_BE\obj\Debug\net6.0\CentroEades_BE.pdb
 C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\ProyCentro-Eades\CentroEades_BE\obj\Debug\net6.0\ref\CentroEades_BE.dll
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_BE\bin\Debug\net6.0\CentroEades_BE.deps.json
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_BE\bin\Debug\net6.0\CentroEades_BE.dll
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_BE\bin\Debug\net6.0\CentroEades_BE.pdb
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_BE\obj\Debug\net6.0\CentroEades_BE.csproj.AssemblyReference.cache
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_BE\obj\Debug\net6.0\CentroEades_BE.GeneratedMSBuildEditorConfig.editorconfig
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_BE\obj\Debug\net6.0\CentroEades_BE.AssemblyInfoInputs.cache
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_BE\obj\Debug\net6.0\CentroEades_BE.AssemblyInfo.cs
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_BE\obj\Debug\net6.0\CentroEades_BE.csproj.CoreCompileInputs.cache
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_BE\obj\Debug\net6.0\CentroEades_BE.dll
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_BE\obj\Debug\net6.0\refint\CentroEades_BE.dll
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_BE\obj\Debug\net6.0\CentroEades_BE.pdb
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_BE\obj\Debug\net6.0\ref\CentroEades_BE.dll

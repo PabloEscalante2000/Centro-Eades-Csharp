@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CentroEades_BE
 {
-    public class ApoderadosBE
+    public class ApoderadoBE
     {
         // Definimos la entidad de negocio ApoderadosBE, con todas las propiedades de acuerdo a la estructura 
         // de la tabla Tb_Apoderados
@@ -22,5 +22,7 @@ namespace CentroEades_BE
         public DateTime Fech_Ult_Mod { get; set; }
         public String Usu_Ult_Mod { get; set; }
         public Int16 Est_apo { get; set; }
+        public String Estado { get; set; }
+
     }
 }

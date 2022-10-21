@@ -15,3 +15,20 @@ C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\ProyCentro-Eades\Ce
 C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\ProyCentro-Eades\CentroEades_BL\obj\Debug\net6.0\refint\CentroEades_BL.dll
 C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\ProyCentro-Eades\CentroEades_BL\obj\Debug\net6.0\CentroEades_BL.pdb
 C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\ProyCentro-Eades\CentroEades_BL\obj\Debug\net6.0\ref\CentroEades_BL.dll
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_BL\bin\Debug\net6.0\CentroEades_BL.deps.json
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_BL\bin\Debug\net6.0\CentroEades_BL.dll
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_BL\bin\Debug\net6.0\CentroEades_BL.pdb
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_BL\bin\Debug\net6.0\CentroEades_ADO.dll
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_BL\bin\Debug\net6.0\CentroEades_BE.dll
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_BL\bin\Debug\net6.0\CentroEades_ADO.pdb
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_BL\bin\Debug\net6.0\CentroEades_BE.pdb
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_BL\obj\Debug\net6.0\CentroEades_BL.csproj.AssemblyReference.cache
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_BL\obj\Debug\net6.0\CentroEades_BL.GeneratedMSBuildEditorConfig.editorconfig
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_BL\obj\Debug\net6.0\CentroEades_BL.AssemblyInfoInputs.cache
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_BL\obj\Debug\net6.0\CentroEades_BL.AssemblyInfo.cs
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_BL\obj\Debug\net6.0\CentroEades_BL.csproj.CoreCompileInputs.cache
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_BL\obj\Debug\net6.0\CentroEades_BL.csproj.CopyComplete
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_BL\obj\Debug\net6.0\CentroEades_BL.dll
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_BL\obj\Debug\net6.0\refint\CentroEades_BL.dll
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_BL\obj\Debug\net6.0\CentroEades_BL.pdb
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_BL\obj\Debug\net6.0\ref\CentroEades_BL.dll

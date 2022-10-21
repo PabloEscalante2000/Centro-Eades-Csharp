@@ -13,3 +13,18 @@ C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\ProyCentro-Eades\Ce
 C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\ProyCentro-Eades\CentroEades_ADO\obj\Debug\net6.0\refint\CentroEades_ADO.dll
 C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\ProyCentro-Eades\CentroEades_ADO\obj\Debug\net6.0\CentroEades_ADO.pdb
 C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\ProyCentro-Eades\CentroEades_ADO\obj\Debug\net6.0\ref\CentroEades_ADO.dll
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_ADO\bin\Debug\net6.0\CentroEades_ADO.deps.json
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_ADO\bin\Debug\net6.0\CentroEades_ADO.dll
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_ADO\bin\Debug\net6.0\CentroEades_ADO.pdb
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_ADO\bin\Debug\net6.0\CentroEades_BE.dll
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_ADO\bin\Debug\net6.0\CentroEades_BE.pdb
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_ADO\obj\Debug\net6.0\CentroEades_ADO.csproj.AssemblyReference.cache
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_ADO\obj\Debug\net6.0\CentroEades_ADO.GeneratedMSBuildEditorConfig.editorconfig
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_ADO\obj\Debug\net6.0\CentroEades_ADO.AssemblyInfoInputs.cache
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_ADO\obj\Debug\net6.0\CentroEades_ADO.AssemblyInfo.cs
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_ADO\obj\Debug\net6.0\CentroEades_ADO.csproj.CoreCompileInputs.cache
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_ADO\obj\Debug\net6.0\CentroEades_ADO.csproj.CopyComplete
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_ADO\obj\Debug\net6.0\CentroEades_ADO.dll
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_ADO\obj\Debug\net6.0\refint\CentroEades_ADO.dll
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_ADO\obj\Debug\net6.0\CentroEades_ADO.pdb
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_ADO\obj\Debug\net6.0\ref\CentroEades_ADO.dll
