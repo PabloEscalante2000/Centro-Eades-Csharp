@@ -15,6 +15,9 @@ namespace CentroEades_BE
         public String Nom_apo { get; set; }
         public String Ape_apo { get; set; }
         public String Dir_apo { get; set; }
+        public String Departamento { get; set; }
+        public String Provincia { get; set; }
+        public String Distrito { get; set; }
         public String Dni_apo { get; set; }
         public String Tel_apo { get; set; }
         public DateTime Fec_reg { get; set; }

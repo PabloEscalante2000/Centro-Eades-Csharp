@@ -33,6 +33,7 @@ namespace CentroEades_ADO
                 cmd.Parameters.AddWithValue("@vNom", objProfesionalBE.Nom_pro);
                 cmd.Parameters.AddWithValue("@vApe", objProfesionalBE.Ape_pro);
                 cmd.Parameters.AddWithValue("@vSuel", objProfesionalBE.Sue_pro);
+                cmd.Parameters.AddWithValue("@vFec", objProfesionalBE.Fech_ing);
                 cmd.Parameters.AddWithValue("@vDni", objProfesionalBE.Dni_pro);
                 cmd.Parameters.AddWithValue("@vEmail", objProfesionalBE.Email_pro);
                 cmd.Parameters.AddWithValue("@vUsu_Registro", objProfesionalBE.Usu_Registro);
@@ -80,6 +81,7 @@ namespace CentroEades_ADO
                 cmd.Parameters.AddWithValue("@vNom", objProfesionalBE.Nom_pro);
                 cmd.Parameters.AddWithValue("@vApe", objProfesionalBE.Ape_pro);
                 cmd.Parameters.AddWithValue("@vSuel", objProfesionalBE.Sue_pro);
+                cmd.Parameters.AddWithValue("@vFec", objProfesionalBE.Fech_ing);
                 cmd.Parameters.AddWithValue("@vDni", objProfesionalBE.Dni_pro);
                 cmd.Parameters.AddWithValue("@vEmail", objProfesionalBE.Email_pro);
                 cmd.Parameters.AddWithValue("@vUsu_Ult_Mod", objProfesionalBE.Usu_Ult_Mod);
@@ -227,8 +229,5 @@ namespace CentroEades_ADO
             }
             
         }
-
-       
-
     }
 }
