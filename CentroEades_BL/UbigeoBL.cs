@@ -10,7 +10,7 @@ using CentroEades_BE;
 
 namespace CentroEades_BL
 {
-    internal class UbigeoBL
+    public class UbigeoBL
     {
         UbigeoADO objUbigeoADO = new UbigeoADO();
         public DataTable Ubigeo_Departamentos()

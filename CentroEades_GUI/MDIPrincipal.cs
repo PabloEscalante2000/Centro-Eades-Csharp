@@ -27,9 +27,9 @@ namespace CentroEades_GUI
 
         private void apoderadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //ApoderadoMan01 apo01 = new ApoderadoMan01();
-            //apo01.MdiParent = this;
-            //apo01.Show();
+            ApoderadoMan01 apo01 = new ApoderadoMan01();
+            apo01.MdiParent = this;
+            apo01.Show();
         }
 
         private void pacientesToolStripMenuItem_Click(object sender, EventArgs e)
