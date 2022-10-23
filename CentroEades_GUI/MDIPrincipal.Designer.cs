@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.mantenimiientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mantenimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.apoderadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pacientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.profesionalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,30 +48,30 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mantenimiientosToolStripMenuItem});
+            this.mantenimientosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // mantenimiientosToolStripMenuItem
+            // mantenimientosToolStripMenuItem
             // 
-            this.mantenimiientosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mantenimientosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.apoderadosToolStripMenuItem,
             this.pacientesToolStripMenuItem,
             this.profesionalesToolStripMenuItem,
             this.toolStripMenuItem1,
             this.salirToolStripMenuItem});
-            this.mantenimiientosToolStripMenuItem.Name = "mantenimiientosToolStripMenuItem";
-            this.mantenimiientosToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
-            this.mantenimiientosToolStripMenuItem.Text = "Mantenimientos";
+            this.mantenimientosToolStripMenuItem.Name = "mantenimientosToolStripMenuItem";
+            this.mantenimientosToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
+            this.mantenimientosToolStripMenuItem.Text = "Mantenimientos";
             // 
             // apoderadosToolStripMenuItem
             // 
             this.apoderadosToolStripMenuItem.Image = global::CentroEades_GUI.Properties.Resources.icons8_father_64;
             this.apoderadosToolStripMenuItem.Name = "apoderadosToolStripMenuItem";
-            this.apoderadosToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.apoderadosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.apoderadosToolStripMenuItem.Text = "Apoderados";
             this.apoderadosToolStripMenuItem.Click += new System.EventHandler(this.apoderadosToolStripMenuItem_Click);
             // 
@@ -79,7 +79,7 @@
             // 
             this.pacientesToolStripMenuItem.Image = global::CentroEades_GUI.Properties.Resources.icons8_patient_64;
             this.pacientesToolStripMenuItem.Name = "pacientesToolStripMenuItem";
-            this.pacientesToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.pacientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pacientesToolStripMenuItem.Text = "Pacientes";
             this.pacientesToolStripMenuItem.Click += new System.EventHandler(this.pacientesToolStripMenuItem_Click);
             // 
@@ -87,20 +87,20 @@
             // 
             this.profesionalesToolStripMenuItem.Image = global::CentroEades_GUI.Properties.Resources.icons8_psychiatrist_64;
             this.profesionalesToolStripMenuItem.Name = "profesionalesToolStripMenuItem";
-            this.profesionalesToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.profesionalesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.profesionalesToolStripMenuItem.Text = "Profesionales";
             this.profesionalesToolStripMenuItem.Click += new System.EventHandler(this.profesionalesToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(141, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Image = global::CentroEades_GUI.Properties.Resources.icons8_apagar_48;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -176,7 +176,7 @@
         #endregion
 
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem mantenimiientosToolStripMenuItem;
+        private ToolStripMenuItem mantenimientosToolStripMenuItem;
         private ToolStripMenuItem apoderadosToolStripMenuItem;
         private ToolStripMenuItem pacientesToolStripMenuItem;
         private ToolStripMenuItem profesionalesToolStripMenuItem;

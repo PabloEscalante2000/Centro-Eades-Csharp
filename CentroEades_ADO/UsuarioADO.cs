@@ -6,8 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 //Ensamblado..
-using System.Data;
-using System.Data.SqlClient;
+
 using CentroEades_BE;
 
 

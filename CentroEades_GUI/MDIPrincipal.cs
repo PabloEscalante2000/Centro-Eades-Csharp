@@ -70,19 +70,18 @@ namespace CentroEades_GUI
             this.lblUsuario.Text = clsCredenciales.Usuario;
 
             //Segun su nivel , le damos acceso a los menus..
-            //if (clsCredenciales.Nivel == 1)
-            //{
-            //    //Si es administrador...
-            //    mantenimientosToolStripMenuItem.Visible = true;
-            //    consultasToolStripMenuItem.Visible = true;
-            //    listadosToolStripMenuItem.Visible = true;
-            //}
-            //else if (clsCredenciales.Nivel == 2)
-            //{
-            //    mantenimientosToolStripMenuItem.Visible = true;
-            //    consultasToolStripMenuItem.Visible = true;
-            //    listadosToolStripMenuItem.Visible = false;
-            //}
+            if (clsCredenciales.Nivel == 1)
+            {
+                //Es administrador...
+                mantenimientosToolStripMenuItem.Visible = true;
+                
+            }
+            else if (clsCredenciales.Nivel == 2)
+            {
+                //Es Recepcionista
+                mantenimientosToolStripMenuItem.Visible = false;
+                
+            }
 
         }
 

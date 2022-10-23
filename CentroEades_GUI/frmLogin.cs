@@ -53,12 +53,14 @@ namespace CentroEades_GUI
                 }
                 else if (txtLogin.Text.Trim() == objUsuarioBE.Login_Usuario && txtPassword.Text.Trim() == objUsuarioBE.Pass_Usuario)
                 {
-                    this.Hide();
-                    timer1.Enabled = false;
+                    this.Hide(); //ocultamos el login
+                    timer1.Enabled = false; //apagamos el timer
+                    //igualamos los valores de objUsuarioBE a los parametros de la clase clsCredenciales
                     clsCredenciales.Usuario = objUsuarioBE.Login_Usuario;
                     clsCredenciales.Password = objUsuarioBE.Pass_Usuario;
                     clsCredenciales.Nivel = objUsuarioBE.Niv_Usuario;
 
+                    //creamos una instancia del MDIPrincipal y lo inicializamos
                     MDIPrincipal objMDI = new MDIPrincipal();
                     objMDI.Show();
                 }
