@@ -177,10 +177,9 @@ namespace CentroEades_ADO
                     objProfesionalBE.Fech_ing = Convert.ToDateTime(dtr["Fech_ing"]);
                     objProfesionalBE.Dni_pro = dtr["Dni_pro"].ToString();
                     objProfesionalBE.Email_pro = dtr["Email_pro"].ToString();
-                    objProfesionalBE.Fech_Registro = Convert.ToDateTime(dtr["Fec_reg"]);
+                    objProfesionalBE.Fech_Registro = Convert.ToDateTime(dtr["Fech_Registro"]);
                     objProfesionalBE.Usu_Registro = dtr["Usu_Registro"].ToString();
-                    objProfesionalBE.Fech_Ult_Mod = Convert.ToDateTime(dtr["Usu_Registro"]);
-                    objProfesionalBE.Usu_Ult_Mod = dtr["Usu_Ult_Mod"].ToString();
+                    //objProfesionalBE.Usu_Ult_Mod = dtr["Usu_Ult_Mod"].ToString();
                     objProfesionalBE.Est_pro= Convert.ToInt16(dtr["Est_pro"]);
 
                 }

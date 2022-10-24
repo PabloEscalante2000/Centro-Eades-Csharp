@@ -85,11 +85,11 @@ namespace CentroEades_GUI
         {
             try
             {
-                //ProfesionalMan03 profe03 = new ProfesionalMan03();
+                ProfesionalMan03 profe03 = new ProfesionalMan03();
                 //Se toma el valor de la columna cero de la fila seleccionada en el
                 //datagridview...
-                //profe03.Codigo = dtgProfesionales.CurrentRow.Cells[0].Value.ToString();
-                //profe03.ShowDialog();
+                profe03.Codigo = dtgProfesionales.CurrentRow.Cells[0].Value.ToString();
+                profe03.ShowDialog();
 
                 //Al retornar, refrescamos la vista y cargamos los datos para ver los
                 //cambios del Apoderado actualizado.

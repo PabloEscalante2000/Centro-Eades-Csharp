@@ -14,7 +14,7 @@ namespace CentroEades_GUI
 {
     public partial class ProfesionalMan03 : Form
     {
-        ProfesionalBL objProfesiionalBL = new ProfesionalBL();
+        ProfesionalBL objProfesionalBL = new ProfesionalBL();
         ProfesionalBE objProfesionalBE = new ProfesionalBE();
         public ProfesionalMan03()
         {
@@ -30,21 +30,17 @@ namespace CentroEades_GUI
             try
             {
                 //Mostramos los datos del apoderado a actualizar
-                objApoderadoBE = objApoderadoBL.ConsultarApoderado(this.Codigo);
+                objProfesionalBE = objProfesionalBL.ConsultarProfesional(this.Codigo);
 
-                lblCod.Text = objApoderadoBE.Cod_apo;
-                txtNombre.Text = objApoderadoBE.Nom_apo;
-                txtApellido.Text = objApoderadoBE.Ape_apo;
-                txtDir.Text = objApoderadoBE.Dir_apo;
-                mskDni.Text = objApoderadoBE.Dni_apo;
-                txtTel.Text = objApoderadoBE.Tel_apo;
-                chkEstado.Checked = Convert.ToBoolean(objApoderadoBE.Est_apo);
-                String Id_Ubigeo = objApoderadoBE.Id_Ubigeo;
-                //Mostramos en los 3 combos el ubigeo
-                //Caracteres 1 y 2 : Departamento, Caracteres 3 y 4 : Provincia, Caracteres 5 y 6: Distrito
-                //Cargamos el Ubigeo
-                CargarUbigeo(Id_Ubigeo.Substring(0, 2), Id_Ubigeo.Substring(2, 2), Id_Ubigeo.Substring(4, 2));
-
+                lblCodigo.Text = objProfesionalBE.Cod_pro;
+                txtId_Esp.Text = Convert.ToString(objProfesionalBE.Id_Espec);
+                txtNombres.Text = objProfesionalBE.Nom_pro;
+                txtApellidos.Text = objProfesionalBE.Ape_pro;
+                mskSueldo.Text = Convert.ToString(objProfesionalBE.Sue_pro);
+                mskFecIng.Text = Convert.ToString(objProfesionalBE.Fech_ing);
+                mskDni.Text = objProfesionalBE.Dni_pro;
+                txtEmail.Text = objProfesionalBE.Email_pro;
+                chkEstado.Checked = Convert.ToBoolean(objProfesionalBE.Est_pro);
 
             }
             catch (Exception ex)
@@ -56,46 +52,44 @@ namespace CentroEades_GUI
         {
             try
             {
-                //Validamos el nombre , apellidos , la direccion y el dni
-                if (txtNombre.Text.Trim() == String.Empty)
+                //Validamos el cod. Especialidad, nombre , apellidos ,sueldo y el dni
+                if (txtId_Esp.Text.Trim() == String.Empty)
                 {
-                    throw new Exception("El nombre del apoderado es obligatorio");
+                    throw new Exception("El Codigo de Especialidad es obligatorio");
                 }
-                if (txtApellido.Text.Trim() == String.Empty)
+                if (txtNombres.Text.Trim() == String.Empty)
                 {
-                    throw new Exception("El apellido del apoderado es obligatorio");
+                    throw new Exception("El nombre del Profesional es obligatorio");
                 }
-                if (txtDir.Text.Trim() == String.Empty)
+                if (txtApellidos.Text.Trim() == String.Empty)
                 {
-                    throw new Exception("La dirección del apoderado es obligatoria");
+                    throw new Exception("El apellido del Profesional es obligatorio");
+                }
+                if (mskSueldo.Text.Trim() == String.Empty)
+                {
+                    throw new Exception("El Sueldo del profesional es obligatorio");
                 }
                 if (mskDni.Text.Trim() == String.Empty)
                 {
                     throw new Exception("El numero de DNI es obligatorio");
                 }
-                //Validamos el ubigeo
-                if (cboDepartamento.SelectedIndex == 0 || cboProvincia.SelectedIndex == 0 || cboDistrito.SelectedIndex == 0)
-                {
-                    throw new Exception("El Departamento , Provincia y Distrito son datos obligatorios");
-                }
+
 
                 //Si todo esta OK , Actualizamos la entidad de negocios..
-                objApoderadoBE.Cod_apo = lblCod.Text;
-                objApoderadoBE.Nom_apo = txtNombre.Text.Trim();
-                objApoderadoBE.Ape_apo = txtApellido.Text.Trim();
-                objApoderadoBE.Dir_apo = txtDir.Text.Trim();
-                objApoderadoBE.Dni_apo = mskDni.Text.Trim();
-                objApoderadoBE.Tel_apo = txtTel.Text.Trim();
-                //Recuerde que el IdUbiigeo es la concatenacion de los valores del Id Departamento,
-                //Id Provinca y Id Distrito seleccionados desde los respectivos combos
-                objApoderadoBE.Id_Ubigeo = cboDepartamento.SelectedValue.ToString() + cboProvincia.SelectedValue.ToString() +
-                    cboDistrito.SelectedValue.ToString();
-                objApoderadoBE.Usu_Ult_Mod = clsCredenciales.Usuario;
-                objApoderadoBE.Est_apo = Convert.ToInt16(chkEstado.Checked);
+                objProfesionalBE.Id_Espec = Convert.ToInt16(txtId_Esp.Text);
+                objProfesionalBE.Nom_pro= txtNombres.Text.Trim();
+                objProfesionalBE.Ape_pro = txtApellidos.Text.Trim();
+                objProfesionalBE.Sue_pro = Convert.ToSingle(mskSueldo.Text.Trim());
+                objProfesionalBE.Fech_ing = Convert.ToDateTime(mskFecIng.Text.Trim());
+                objProfesionalBE.Dni_pro = mskDni.Text.Trim();
+                objProfesionalBE.Email_pro = txtEmail.Text.Trim();
+
+                objProfesionalBE.Usu_Ult_Mod = clsCredenciales.Usuario;
+                objProfesionalBE.Est_pro = Convert.ToInt16(chkEstado.Checked);
 
 
                 //Invocamos al metodo actualizar..
-                if (objApoderadoBL.ActualizarApoderado(objApoderadoBE) == true)
+                if (objProfesionalBL.ActualizarProfesional(objProfesionalBE) == true)
                 {
                     this.Close();
                 }

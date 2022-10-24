@@ -70,3 +70,4 @@ D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\
 D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_GUI\obj\Debug\net6.0-windows\CentroEades_GUI.ApoderadoMan03.resources
 D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_GUI\obj\Debug\net6.0-windows\CentroEades_GUI.ProfesionalMan01.resources
 D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_GUI\obj\Debug\net6.0-windows\CentroEades_GUI.ProfesionalMan02.resources
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_GUI\obj\Debug\net6.0-windows\CentroEades_GUI.ProfesionalMan03.resources
