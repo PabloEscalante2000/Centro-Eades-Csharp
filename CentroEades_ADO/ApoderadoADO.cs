@@ -109,7 +109,7 @@ namespace CentroEades_ADO
 
         }
 
-        public Boolean EliminarApoderado(String strCodigo)
+        public Boolean EliminarApoderado(String strCodigo ,String strUsuario)
         {
             
             try
@@ -122,6 +122,7 @@ namespace CentroEades_ADO
                 cmd.Parameters.Clear();
                 //Para eliminar un apoderado solo se requiere saber el codigo
                 cmd.Parameters.AddWithValue("@vcod", strCodigo);
+                cmd.Parameters.AddWithValue("@Usuario", strUsuario);
                 //Abrimos conexion y ejecutamos
                 cnx.Open();
                 cmd.ExecuteNonQuery();
@@ -170,6 +171,7 @@ namespace CentroEades_ADO
                     objApoderadoBE.Nom_apo = dtr["Nom_apo"].ToString();
                     objApoderadoBE.Ape_apo = dtr["Ape_apo"].ToString();
                     objApoderadoBE.Dir_apo = dtr["Dir_apo"].ToString();
+                    objApoderadoBE.Dni_apo = dtr["Dni_apo"].ToString();
                     objApoderadoBE.Id_Ubigeo = dtr["Id_Ubigeo"].ToString();
                     objApoderadoBE.Departamento = dtr["Departamento"].ToString();
                     objApoderadoBE.Provincia = dtr["Dir_apo"].ToString();
@@ -177,7 +179,6 @@ namespace CentroEades_ADO
                     objApoderadoBE.Tel_apo = dtr["Tel_apo"].ToString();
                     objApoderadoBE.Fec_reg = Convert.ToDateTime(dtr["Fec_reg"]);
                     objApoderadoBE.Usu_Registro = dtr["Usu_Registro"].ToString();
-                    objApoderadoBE.Fech_Ult_Mod = Convert.ToDateTime(dtr["Fech_Ult_Mod"]);
                     objApoderadoBE.Usu_Ult_Mod = dtr["Usu_Ult_Mod"].ToString();
                     objApoderadoBE.Est_apo= Convert.ToInt16(dtr["Est_apo"]);
                     objApoderadoBE.Estado = dtr["Estado"].ToString();  

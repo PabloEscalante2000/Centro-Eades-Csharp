@@ -88,14 +88,14 @@ namespace CentroEades_GUI
         {
             try
             {
-                //ApoderadoMan03 apode03 = new ApoderadoMan03();
+                ApoderadoMan03 apode03 = new ApoderadoMan03();
                 //Se toma el valor de la columna cero de la fila seleccionada en el
                 //datagridview...
-                //apode03.Codigo = dtgApoderados.CurrentRow.Cells[0].Value.ToString();
-                //apode03.ShowDialog();
+                apode03.Codigo = dtgApoderados.CurrentRow.Cells[0].Value.ToString();
+                apode03.ShowDialog();
 
                 //Al retornar, refrescamos la vista y cargamos los datos para ver los
-                //cambios del proveedor actualizado.
+                //cambios del Apoderado actualizado.
                 dtv = new DataView(objApoderadoBL.ListarApoderado());
                 CargarDatos(txtFiltro.Text.Trim());
 
@@ -110,6 +110,34 @@ namespace CentroEades_GUI
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult vrpta;
+                vrpta = MessageBox.Show("Seguro de eliminar el registro?", "Confirmar",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (vrpta == DialogResult.Yes)
+                {
+                    if (objApoderadoBL.EliminarApoderado
+                        (dtgApoderados.CurrentRow.Cells[0].Value.ToString(), clsCredenciales.Usuario) == true)
+                    {
+                        CargarDatos(txtFiltro.Text.Trim());
+                    }
+                    else
+                    {
+                        throw new Exception("Registro no se pudo eliminar . Contacte con Administrador de Sistema");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error:" + ex.Message);
+            }
         }
     }
 }

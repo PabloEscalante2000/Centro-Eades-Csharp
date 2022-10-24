@@ -22,9 +22,9 @@ namespace CentroEades_BL
         {
             return objApoderadoADO.ActualizarApoderado(objApoderadoBE);
         }
-        public Boolean EliminarApoderado(String strcod)
+        public Boolean EliminarApoderado(String strcod , String strUsuario)
         {
-            return objApoderadoADO.EliminarApoderado(strcod);
+            return objApoderadoADO.EliminarApoderado(strcod, strUsuario);
         }
 
         public ApoderadoBE ConsultarApoderado(String strcod)
