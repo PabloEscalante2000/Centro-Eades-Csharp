@@ -41,9 +41,9 @@ namespace CentroEades_GUI
 
         private void profesionalesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //ProfesionalMan01 pro01 = new ProfesionalMan01();
-            //pro01.MdiParent = this;
-            //pro01.Show();
+            ProfesionalMan01 pro01 = new ProfesionalMan01();
+            pro01.MdiParent = this;
+            pro01.Show();
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)

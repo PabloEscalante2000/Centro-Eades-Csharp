@@ -22,9 +22,9 @@ namespace CentroEades_BL
         {
             return objProfesionalADO.ActualizarProfesional(objProfesionalBE);
         }
-        public Boolean EliminarProfesional(String strcod)
+        public Boolean EliminarProfesional(String strcod ,String strUsuario)
         {
-            return objProfesionalADO.EliminarProfesional(strcod);
+            return objProfesionalADO.EliminarProfesional(strcod , strUsuario);
         }
 
         public ProfesionalBE ConsultarProfesional(String strcod)

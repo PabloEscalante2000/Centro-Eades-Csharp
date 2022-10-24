@@ -111,7 +111,7 @@ namespace CentroEades_ADO
 
         }
 
-        public Boolean EliminarProfesional(String strCodigo)
+        public Boolean EliminarProfesional(String strCodigo ,String strUsuario)
         {
             
             try
@@ -124,6 +124,7 @@ namespace CentroEades_ADO
                 cmd.Parameters.Clear();
                 //Para eliminar un profesional solo se requiere saber el codigo
                 cmd.Parameters.AddWithValue("@vcod", strCodigo);
+                cmd.Parameters.AddWithValue("@Usuario", strUsuario);
                 //Abrimos conexion y ejecutamos
                 cnx.Open();
                 cmd.ExecuteNonQuery();
