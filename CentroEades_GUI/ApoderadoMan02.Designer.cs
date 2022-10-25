@@ -33,7 +33,6 @@
             this.btnGrabar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.chkEstado = new System.Windows.Forms.CheckBox();
-            this.txtUsuReg = new System.Windows.Forms.TextBox();
             this.cboDistrito = new System.Windows.Forms.ComboBox();
             this.cboProvincia = new System.Windows.Forms.ComboBox();
             this.cboDepartamento = new System.Windows.Forms.ComboBox();
@@ -43,7 +42,6 @@
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -60,7 +58,6 @@
             this.grpDatos.Controls.Add(this.btnGrabar);
             this.grpDatos.Controls.Add(this.btnCancelar);
             this.grpDatos.Controls.Add(this.chkEstado);
-            this.grpDatos.Controls.Add(this.txtUsuReg);
             this.grpDatos.Controls.Add(this.cboDistrito);
             this.grpDatos.Controls.Add(this.cboProvincia);
             this.grpDatos.Controls.Add(this.cboDepartamento);
@@ -70,7 +67,6 @@
             this.grpDatos.Controls.Add(this.txtApellidos);
             this.grpDatos.Controls.Add(this.txtNombres);
             this.grpDatos.Controls.Add(this.label10);
-            this.grpDatos.Controls.Add(this.label9);
             this.grpDatos.Controls.Add(this.label8);
             this.grpDatos.Controls.Add(this.label7);
             this.grpDatos.Controls.Add(this.label6);
@@ -110,25 +106,18 @@
             // chkEstado
             // 
             this.chkEstado.AutoSize = true;
-            this.chkEstado.Location = new System.Drawing.Point(135, 319);
+            this.chkEstado.Location = new System.Drawing.Point(135, 296);
             this.chkEstado.Name = "chkEstado";
             this.chkEstado.Size = new System.Drawing.Size(68, 19);
             this.chkEstado.TabIndex = 9;
             this.chkEstado.Text = "Activo ?";
             this.chkEstado.UseVisualStyleBackColor = true;
             // 
-            // txtUsuReg
-            // 
-            this.txtUsuReg.Location = new System.Drawing.Point(135, 284);
-            this.txtUsuReg.Name = "txtUsuReg";
-            this.txtUsuReg.Size = new System.Drawing.Size(224, 23);
-            this.txtUsuReg.TabIndex = 8;
-            // 
             // cboDistrito
             // 
             this.cboDistrito.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboDistrito.FormattingEnabled = true;
-            this.cboDistrito.Location = new System.Drawing.Point(135, 249);
+            this.cboDistrito.Location = new System.Drawing.Point(135, 256);
             this.cboDistrito.Name = "cboDistrito";
             this.cboDistrito.Size = new System.Drawing.Size(286, 23);
             this.cboDistrito.TabIndex = 7;
@@ -137,7 +126,7 @@
             // 
             this.cboProvincia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboProvincia.FormattingEnabled = true;
-            this.cboProvincia.Location = new System.Drawing.Point(135, 214);
+            this.cboProvincia.Location = new System.Drawing.Point(135, 221);
             this.cboProvincia.Name = "cboProvincia";
             this.cboProvincia.Size = new System.Drawing.Size(286, 23);
             this.cboProvincia.TabIndex = 6;
@@ -147,7 +136,7 @@
             // 
             this.cboDepartamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboDepartamento.FormattingEnabled = true;
-            this.cboDepartamento.Location = new System.Drawing.Point(135, 179);
+            this.cboDepartamento.Location = new System.Drawing.Point(135, 186);
             this.cboDepartamento.Name = "cboDepartamento";
             this.cboDepartamento.Size = new System.Drawing.Size(286, 23);
             this.cboDepartamento.TabIndex = 5;
@@ -156,6 +145,7 @@
             // txtTel
             // 
             this.txtTel.Location = new System.Drawing.Point(135, 148);
+            this.txtTel.MaxLength = 9;
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(143, 23);
             this.txtTel.TabIndex = 4;
@@ -192,25 +182,16 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(18, 319);
+            this.label10.Location = new System.Drawing.Point(18, 296);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(48, 15);
             this.label10.TabIndex = 0;
             this.label10.Text = "Estado :";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(18, 287);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(99, 15);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Usuario Registro :";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(18, 252);
+            this.label8.Location = new System.Drawing.Point(18, 259);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 15);
             this.label8.TabIndex = 0;
@@ -219,7 +200,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(18, 217);
+            this.label7.Location = new System.Drawing.Point(18, 224);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(62, 15);
             this.label7.TabIndex = 0;
@@ -228,7 +209,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 182);
+            this.label6.Location = new System.Drawing.Point(18, 189);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(89, 15);
             this.label6.TabIndex = 0;
@@ -305,7 +286,6 @@
         private Button btnGrabar;
         private Button btnCancelar;
         private CheckBox chkEstado;
-        private TextBox txtUsuReg;
         private ComboBox cboDistrito;
         private ComboBox cboProvincia;
         private ComboBox cboDepartamento;
@@ -315,7 +295,6 @@
         private TextBox txtApellidos;
         private TextBox txtNombres;
         private Label label10;
-        private Label label9;
         private Label label8;
         private Label label7;
         private Label label6;
