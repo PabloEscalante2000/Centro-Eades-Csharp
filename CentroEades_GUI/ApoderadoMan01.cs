@@ -35,6 +35,9 @@ namespace CentroEades_GUI
         {
             try
             {
+                //Para que no se muestren columnas autogeneradas en el grid..
+                dtgApoderados.AutoGenerateColumns = false;
+
                 // Invocamos al metodo CargarDatos pasandole una cadena vacia,
                 // lo cual hara que se muestren todos los proveedores por defecto al momento de cargar
                 // el formulario.

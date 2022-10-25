@@ -28,6 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfesionalMan01));
             this.label1 = new System.Windows.Forms.Label();
             this.txtFiltro = new System.Windows.Forms.TextBox();
@@ -38,6 +43,14 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.Cod_pro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nom_pro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ape_pro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sue_pro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fech_ing = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Antiguedad_Años = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email_pro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProfesionales)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,6 +80,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgProfesionales.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgProfesionales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgProfesionales.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Cod_pro,
+            this.Nom_pro,
+            this.Ape_pro,
+            this.Sue_pro,
+            this.Fech_ing,
+            this.Antiguedad_Años,
+            this.Email_pro,
+            this.Estado});
             this.dtgProfesionales.Location = new System.Drawing.Point(12, 54);
             this.dtgProfesionales.Name = "dtgProfesionales";
             this.dtgProfesionales.ReadOnly = true;
@@ -143,6 +165,78 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // Cod_pro
+            // 
+            this.Cod_pro.DataPropertyName = "Cod_pro";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Cod_pro.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Cod_pro.HeaderText = "Codigo";
+            this.Cod_pro.Name = "Cod_pro";
+            this.Cod_pro.ReadOnly = true;
+            // 
+            // Nom_pro
+            // 
+            this.Nom_pro.DataPropertyName = "Nom_pro";
+            this.Nom_pro.HeaderText = "Nombre";
+            this.Nom_pro.Name = "Nom_pro";
+            this.Nom_pro.ReadOnly = true;
+            // 
+            // Ape_pro
+            // 
+            this.Ape_pro.DataPropertyName = "Ape_pro";
+            this.Ape_pro.HeaderText = "Apellidos";
+            this.Ape_pro.Name = "Ape_pro";
+            this.Ape_pro.ReadOnly = true;
+            // 
+            // Sue_pro
+            // 
+            this.Sue_pro.DataPropertyName = "Sue_pro";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.Sue_pro.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Sue_pro.HeaderText = "Sueldo";
+            this.Sue_pro.Name = "Sue_pro";
+            this.Sue_pro.ReadOnly = true;
+            // 
+            // Fech_ing
+            // 
+            this.Fech_ing.DataPropertyName = "Fech_ing";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "D";
+            dataGridViewCellStyle3.NullValue = null;
+            this.Fech_ing.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Fech_ing.HeaderText = "Fecha Ingreso";
+            this.Fech_ing.Name = "Fech_ing";
+            this.Fech_ing.ReadOnly = true;
+            // 
+            // Antiguedad_Años
+            // 
+            this.Antiguedad_Años.DataPropertyName = "Antiguedad_Años";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Format = "N0";
+            dataGridViewCellStyle4.NullValue = null;
+            this.Antiguedad_Años.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Antiguedad_Años.HeaderText = "Antiguedad en Años";
+            this.Antiguedad_Años.Name = "Antiguedad_Años";
+            this.Antiguedad_Años.ReadOnly = true;
+            // 
+            // Email_pro
+            // 
+            this.Email_pro.DataPropertyName = "Email_pro";
+            this.Email_pro.HeaderText = "Email";
+            this.Email_pro.Name = "Email_pro";
+            this.Email_pro.ReadOnly = true;
+            // 
+            // Estado
+            // 
+            this.Estado.DataPropertyName = "Estado";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Estado.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            // 
             // ProfesionalMan01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -179,5 +273,13 @@
         private Button btnSalir;
         private Button btnActualizar;
         private Button btnEliminar;
+        private DataGridViewTextBoxColumn Cod_pro;
+        private DataGridViewTextBoxColumn Nom_pro;
+        private DataGridViewTextBoxColumn Ape_pro;
+        private DataGridViewTextBoxColumn Sue_pro;
+        private DataGridViewTextBoxColumn Fech_ing;
+        private DataGridViewTextBoxColumn Antiguedad_Años;
+        private DataGridViewTextBoxColumn Email_pro;
+        private DataGridViewTextBoxColumn Estado;
     }
 }

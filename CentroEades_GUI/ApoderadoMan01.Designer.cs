@@ -38,6 +38,14 @@
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnInsertar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.Cod_apo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nom_apo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ape_apo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dni_apo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Provincia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Distrito = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tel_apo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgApoderados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,6 +77,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgApoderados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgApoderados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgApoderados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Cod_apo,
+            this.Nom_apo,
+            this.Ape_apo,
+            this.Dni_apo,
+            this.Provincia,
+            this.Distrito,
+            this.Tel_apo,
+            this.Estado});
             this.dtgApoderados.Location = new System.Drawing.Point(26, 62);
             this.dtgApoderados.Name = "dtgApoderados";
             this.dtgApoderados.ReadOnly = true;
@@ -145,6 +162,62 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // Cod_apo
+            // 
+            this.Cod_apo.DataPropertyName = "Cod_apo";
+            this.Cod_apo.HeaderText = "Codigo";
+            this.Cod_apo.Name = "Cod_apo";
+            this.Cod_apo.ReadOnly = true;
+            // 
+            // Nom_apo
+            // 
+            this.Nom_apo.DataPropertyName = "Nom_apo";
+            this.Nom_apo.HeaderText = "Nombre";
+            this.Nom_apo.Name = "Nom_apo";
+            this.Nom_apo.ReadOnly = true;
+            // 
+            // Ape_apo
+            // 
+            this.Ape_apo.DataPropertyName = "Ape_apo";
+            this.Ape_apo.HeaderText = "Apellidos";
+            this.Ape_apo.Name = "Ape_apo";
+            this.Ape_apo.ReadOnly = true;
+            // 
+            // Dni_apo
+            // 
+            this.Dni_apo.DataPropertyName = "Dni_apo";
+            this.Dni_apo.HeaderText = "DNI";
+            this.Dni_apo.Name = "Dni_apo";
+            this.Dni_apo.ReadOnly = true;
+            // 
+            // Provincia
+            // 
+            this.Provincia.DataPropertyName = "Provincia";
+            this.Provincia.HeaderText = "Provincia";
+            this.Provincia.Name = "Provincia";
+            this.Provincia.ReadOnly = true;
+            // 
+            // Distrito
+            // 
+            this.Distrito.DataPropertyName = "Distrito";
+            this.Distrito.HeaderText = "Distrito";
+            this.Distrito.Name = "Distrito";
+            this.Distrito.ReadOnly = true;
+            // 
+            // Tel_apo
+            // 
+            this.Tel_apo.DataPropertyName = "Tel_apo";
+            this.Tel_apo.HeaderText = "Telefono";
+            this.Tel_apo.Name = "Tel_apo";
+            this.Tel_apo.ReadOnly = true;
+            // 
+            // Estado
+            // 
+            this.Estado.DataPropertyName = "Estado";
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            // 
             // ApoderadoMan01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -181,5 +254,13 @@
         private Button btnActualizar;
         private Button btnInsertar;
         private Button btnEliminar;
+        private DataGridViewTextBoxColumn Cod_apo;
+        private DataGridViewTextBoxColumn Nom_apo;
+        private DataGridViewTextBoxColumn Ape_apo;
+        private DataGridViewTextBoxColumn Dni_apo;
+        private DataGridViewTextBoxColumn Provincia;
+        private DataGridViewTextBoxColumn Distrito;
+        private DataGridViewTextBoxColumn Tel_apo;
+        private DataGridViewTextBoxColumn Estado;
     }
 }
