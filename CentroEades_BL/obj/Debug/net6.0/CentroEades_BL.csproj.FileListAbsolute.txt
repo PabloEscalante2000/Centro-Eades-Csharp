@@ -32,3 +32,20 @@ D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\
 D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_BL\obj\Debug\net6.0\refint\CentroEades_BL.dll
 D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_BL\obj\Debug\net6.0\CentroEades_BL.pdb
 D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_BL\obj\Debug\net6.0\ref\CentroEades_BL.dll
+C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_BL\bin\Debug\net6.0\CentroEades_BL.deps.json
+C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_BL\bin\Debug\net6.0\CentroEades_BL.dll
+C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_BL\bin\Debug\net6.0\CentroEades_BL.pdb
+C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_BL\bin\Debug\net6.0\CentroEades_ADO.dll
+C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_BL\bin\Debug\net6.0\CentroEades_BE.dll
+C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_BL\bin\Debug\net6.0\CentroEades_ADO.pdb
+C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_BL\bin\Debug\net6.0\CentroEades_BE.pdb
+C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_BL\obj\Debug\net6.0\CentroEades_BL.csproj.AssemblyReference.cache
+C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_BL\obj\Debug\net6.0\CentroEades_BL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_BL\obj\Debug\net6.0\CentroEades_BL.AssemblyInfoInputs.cache
+C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_BL\obj\Debug\net6.0\CentroEades_BL.AssemblyInfo.cs
+C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_BL\obj\Debug\net6.0\CentroEades_BL.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_BL\obj\Debug\net6.0\CentroEades_BL.csproj.CopyComplete
+C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_BL\obj\Debug\net6.0\CentroEades_BL.dll
+C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_BL\obj\Debug\net6.0\refint\CentroEades_BL.dll
+C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_BL\obj\Debug\net6.0\CentroEades_BL.pdb
+C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_BL\obj\Debug\net6.0\ref\CentroEades_BL.dll
