@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,7 +38,7 @@ namespace CentroEades_ADO
                 cmd.Parameters.AddWithValue("@vDni", objPacienteBE.Dni_pac);
                 cmd.Parameters.AddWithValue("@vTel", objPacienteBE.Tel_pac);
                 cmd.Parameters.AddWithValue("@vSex", objPacienteBE.Sexo);
-                cmd.Parameters.AddWithValue("@vFech_nav", objPacienteBE.Fec_nac);
+                cmd.Parameters.AddWithValue("@vFech_nac", objPacienteBE.Fec_nac);
                 cmd.Parameters.AddWithValue("@vFoto", objPacienteBE.Foto_pac);
                 cmd.Parameters.AddWithValue("@vUsu_Registro", objPacienteBE.Usu_Registro);
                 cmd.Parameters.AddWithValue("@vEst", objPacienteBE.Est_pac);
@@ -88,7 +89,7 @@ namespace CentroEades_ADO
                 cmd.Parameters.AddWithValue("@vDni", objPacienteBE.Dni_pac);
                 cmd.Parameters.AddWithValue("@vTel", objPacienteBE.Tel_pac);
                 cmd.Parameters.AddWithValue("@vSex", objPacienteBE.Sexo);
-                cmd.Parameters.AddWithValue("@vFech_nav", objPacienteBE.Fec_nac);
+                cmd.Parameters.AddWithValue("@vFech_nac", objPacienteBE.Fec_nac);
                 cmd.Parameters.AddWithValue("@vFoto", objPacienteBE.Foto_pac);
                 cmd.Parameters.AddWithValue("@vUsu_Ult_Mod", objPacienteBE.Usu_Ult_Mod);
                 cmd.Parameters.AddWithValue("@vEst", objPacienteBE.Est_pac);
@@ -188,10 +189,10 @@ namespace CentroEades_ADO
                     objPacienteBE.Tel_pac = dtr["Tel_pac"].ToString();
                     objPacienteBE.Foto_pac = Encoding.ASCII.GetBytes(dtr["Foto_pac"].ToString());
                     objPacienteBE.Fec_reg = Convert.ToDateTime(dtr["Fec_reg"]);
-                    objPacienteBE.Fec_nac = Convert.ToDateTime(dtr["Fec_nav"]);
+                    objPacienteBE.Fec_nac = Convert.ToDateTime(dtr["Fec_nac"]);
                     objPacienteBE.Usu_Registro = dtr["Usu_registro"].ToString();
                     objPacienteBE.Fech_Ult_Mod = Convert.ToDateTime(dtr["Fech_Ult_Mod"]);
-                    objPacienteBE.Usu_Ult_Mod = Convert.ToDateTime(dtr["Usu_Ult_Mod"]);
+                    objPacienteBE.Usu_Ult_Mod = dtr["Usu_Ult_Mod"].ToString();
                     objPacienteBE.Est_pac = Convert.ToInt16(dtr["Est_pac"]);
 
                 }

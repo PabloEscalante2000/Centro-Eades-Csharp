@@ -24,7 +24,7 @@ namespace CentroEades_GUI
         public void CargarDatos(String strFiltro)
         { 
             dtv = new DataView(objPacienteBL.ListarPaciente());
-            dtv.RowFilter = "nom_pac like '%" + strFiltro + "%'";
+            dtv.RowFilter = "Nom_pac like '%" + strFiltro + "%'";
             dtgPacientes.DataSource = dtv;
             lblRegistros.Text = dtgPacientes.Rows.Count.ToString();
         }
@@ -45,7 +45,17 @@ namespace CentroEades_GUI
 
         private void txtFiltro_TextChanged(object sender, EventArgs e)
         {
+            try
+            {
+                //Pasaremos el metodo CargarDatos el texto que se va escribiendo
+                //en la caja de texto
+                CargarDatos(txtFiltro.Text.Trim());
+            }
+            catch (Exception ex)
+            {
 
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)

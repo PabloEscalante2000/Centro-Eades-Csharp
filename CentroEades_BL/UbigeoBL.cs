@@ -25,5 +25,10 @@ namespace CentroEades_BL
         {
             return objUbigeoADO.Ubigeo_DistritosProvinciaDepartamento(strIdDepartamento, strIdProvincia);
         }
+
+        public DataTable Ubigeo_Listar()
+        {
+            return objUbigeoADO.Ubigeo_Listar();
+        }
     }
 }
