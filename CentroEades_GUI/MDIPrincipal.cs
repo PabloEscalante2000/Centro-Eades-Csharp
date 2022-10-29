@@ -34,9 +34,9 @@ namespace CentroEades_GUI
 
         private void pacientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //PacienteMan01 pac01 = new PacienteMan01();
-            //pac01.MdiParent = this;
-            //pac01.Show();
+            PacienteMan01 pac01 = new PacienteMan01();
+            pac01.MdiParent = this;
+            pac01.Show();
         }
 
         private void profesionalesToolStripMenuItem_Click(object sender, EventArgs e)
