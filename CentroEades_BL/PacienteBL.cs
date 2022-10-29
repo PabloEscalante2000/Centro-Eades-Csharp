@@ -32,7 +32,7 @@ namespace CentroEades_BL
             return objPacienteADO.ConsultarPaciente(strcod);
         }
 
-        public DataTable ListarProfesional()
+        public DataTable ListarPaciente()
         {
             return objPacienteADO.ListarPaciente();
         }

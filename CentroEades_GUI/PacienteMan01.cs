@@ -23,7 +23,7 @@ namespace CentroEades_GUI
 
         public void CargarDatos(String strFiltro)
         { 
-            dtv = new DataView(objPacienteBL.ListarProfesional());
+            dtv = new DataView(objPacienteBL.ListarPaciente());
             dtv.RowFilter = "nom_pac like '%" + strFiltro + "%'";
             dtgPacientes.DataSource = dtv;
             lblRegistros.Text = dtgPacientes.Rows.Count.ToString();
@@ -31,7 +31,11 @@ namespace CentroEades_GUI
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
+            PacienteMan02 objPacienteMan02 = new PacienteMan02();
+            objPacienteMan02.ShowDialog();
 
+            //Refresacar la grilla
+            CargarDatos(txtFiltro.Text.Trim());
         }
 
         private void PacienteMan01_Load(object sender, EventArgs e)
