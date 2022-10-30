@@ -135,22 +135,23 @@ namespace CentroEades_GUI
                     throw new Exception("Tiene que ingresar una fecha");
                 }
 
-                objPacienteBE.Cod_pac = lblCodigo.Text.Trim();
-                objPacienteBE.Cod_apo = cboApoderado.SelectedValue.ToString();
-                objPacienteBE.Id_Ubigeo = cboUbigeo.SelectedValue.ToString();
-                objPacienteBE.Nom_pac = txtNombre.Text.Trim();
-                objPacienteBE.Ape_pac = txtApellido.Text.Trim();
-                objPacienteBE.Dir_pac = txtDir.Text.Trim();
-                objPacienteBE.Dni_pac = mskDNI.Text.Trim();
-                objPacienteBE.Tel_pac = txtTelefono.Text.Trim();
-                objPacienteBE.Sexo = Convert.ToString(cboSexo.SelectedItem);
-                objPacienteBE.Fec_nac = Convert.ToDateTime(mskFecNac.Text.Trim());
+                objPacienteBE.Cod_pac = /*lblCodigo.Text*/ "P003" ;
+                objPacienteBE.Cod_apo = /*cboApoderado.SelectedValue.ToString()*/"-";
+                objPacienteBE.Id_Ubigeo = /*cboUbigeo.SelectedValue.ToString()*/"-";
+                objPacienteBE.Nom_pac = /*txtNombre.Text.Trim()*/"-";
+                objPacienteBE.Ape_pac = /*txtApellido.Text.Trim()*/"-";
+                objPacienteBE.Dir_pac = /*txtDir.Text.Trim()*/"-";
+                objPacienteBE.Dni_pac = /*mskDNI.Text.Trim()*/"1";
+                objPacienteBE.Tel_pac = /*txtTelefono.Text.Trim()*/ "1";
+                objPacienteBE.Sexo = /*Convert.ToString(cboSexo.SelectedItem)*/ "M";
+                objPacienteBE.Fec_nac = /*Convert.ToDateTime(mskFecNac.Text.Trim())*/ DateTime.Now;
                 objPacienteBE.Foto_pac = archivoMemoria.GetBuffer();
                 objPacienteBE.Usu_Ult_Mod = clsCredenciales.Usuario;
-                objPacienteBE.Est_pac = (short)(chkActivo.Checked == true ? 1 : 0);
+                objPacienteBE.Est_pac = (short)/*(chkActivo.Checked == true ? 1 : 0)*/ 1;
 
                 if (objPacienteBL.ActualizarPaciente(objPacienteBE) == true)
                 {
+                    MessageBox.Show("Se ha actualizado");
                     this.Close();
                 }
                 else
