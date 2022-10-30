@@ -88,7 +88,7 @@ namespace CentroEades_ADO
                 cmd.Parameters.AddWithValue("@vDir", objPacienteBE.Dir_pac);
                 cmd.Parameters.AddWithValue("@vDni", objPacienteBE.Dni_pac);
                 cmd.Parameters.AddWithValue("@vTel", objPacienteBE.Tel_pac);
-                cmd.Parameters.AddWithValue("@vSex", objPacienteBE.Sexo);
+                cmd.Parameters.AddWithValue("@vSexo", objPacienteBE.Sexo);
                 cmd.Parameters.AddWithValue("@vFech_nac", objPacienteBE.Fec_nac);
                 cmd.Parameters.AddWithValue("@vFoto", objPacienteBE.Foto_pac);
                 cmd.Parameters.AddWithValue("@vUsu_Ult_Mod", objPacienteBE.Usu_Ult_Mod);
@@ -178,22 +178,51 @@ namespace CentroEades_ADO
                     dtr.Read();
                     //Asignamos las columnas del dtr a las propiedades de la instancia
                     //con solo los datos que deseemos mostrar en la consulta
-                    objPacienteBE.Cod_pac = dtr["Cod_pac"].ToString();
-                    objPacienteBE.Cod_apo = dtr["Cod_apo"].ToString();
-                    objPacienteBE.Nom_pac = dtr["Nom_pac"].ToString();
-                    objPacienteBE.Ape_pac = dtr["Ape_pac"].ToString();
-                    objPacienteBE.Dir_pac = dtr["Dir_pac"].ToString();
-                    objPacienteBE.Id_Ubigeo = dtr["Id_Ubigeo"].ToString();
-                    objPacienteBE.Dni_pac = dtr["Dni_pac"].ToString();
-                    objPacienteBE.Sexo = dtr["Sexo"].ToString();
-                    objPacienteBE.Tel_pac = dtr["Tel_pac"].ToString();
-                    objPacienteBE.Foto_pac = Encoding.ASCII.GetBytes(dtr["Foto_pac"].ToString());
-                    objPacienteBE.Fec_reg = Convert.ToDateTime(dtr["Fec_reg"]);
-                    objPacienteBE.Fec_nac = Convert.ToDateTime(dtr["Fec_nac"]);
-                    objPacienteBE.Usu_Registro = dtr["Usu_registro"].ToString();
-                    objPacienteBE.Fech_Ult_Mod = Convert.ToDateTime(dtr["Fech_Ult_Mod"]);
-                    objPacienteBE.Usu_Ult_Mod = dtr["Usu_Ult_Mod"].ToString();
-                    objPacienteBE.Est_pac = Convert.ToInt16(dtr["Est_pac"]);
+                    objPacienteBE.Cod_pac 
+                        = (dtr["Cod_pac"] == DBNull.Value) ? "P002": dtr["Cod_pac"].ToString();
+                    objPacienteBE.Cod_apo = (dtr["Cod_apo"] == DBNull.Value) ?
+                        "null" : dtr["Cod_apo"] as string;
+                    objPacienteBE.Nom_pac = (dtr["Nom_pac"] == DBNull.Value) ?
+                        "null" : dtr["Nom_pac"] as string;
+                    objPacienteBE.Ape_pac = (dtr["Ape_pac"] == DBNull.Value) ?
+                        "null" : dtr["Ape_pac"] as string;
+                    objPacienteBE.Dir_pac = (dtr["Dir_pac"] == DBNull.Value) ?
+                        "null" : dtr["Dir_pac"] as string;
+                    objPacienteBE.Id_Ubigeo = (dtr["Id_Ubigeo"] == DBNull.Value) ?
+                        "010101" : dtr["Id_Ubigeo"] as string;
+                    objPacienteBE.Dni_pac = (dtr["Dni_pac"] == DBNull.Value) ?
+                        "null" : dtr["Dni_pac"] as string;
+                    objPacienteBE.Sexo = (dtr["Nom_pac"] == DBNull.Value) ?
+                        "M" : dtr["Nom_pac"] as string;
+                    objPacienteBE.Tel_pac = (dtr["Tel_pac"] == DBNull.Value) ?
+                        "null" : dtr["Tel_pac"] as string;
+
+                    //Pasar la imagen
+                    if (dtr["Foto_pac"] == DBNull.Value)
+                    {
+                        objPacienteBE.Foto_pac = null;
+                    }
+                    else
+                    {
+                        Byte[] archivo = (byte[])dtr["Foto_pac"];
+                        objPacienteBE.Foto_pac = archivo;
+                    }
+                    
+
+                    objPacienteBE.Fec_reg = (dtr["Fec_reg"] == DBNull.Value) ?
+                       DateTime.Now  : Convert.ToDateTime(dtr["Fec_reg"]);
+                    objPacienteBE.Fec_nac = (dtr["Fec_nac"] == DBNull.Value) ?
+                        DateTime.Now : Convert.ToDateTime(dtr["Fec_nac"]);
+                    objPacienteBE.Usu_Registro = (dtr["Usu_registro"] == DBNull.Value) ?
+                        "null" : dtr["Usu_registro"] as string;
+                    objPacienteBE.Fech_Ult_Mod = (dtr["Fech_Ult_Mod"] == DBNull.Value) ?
+                        DateTime.Now :  Convert.ToDateTime(dtr["Fech_Ult_Mod"]);
+                    objPacienteBE.Usu_Ult_Mod = (dtr["Usu_Ult_Mod"] == DBNull.Value) ?
+                        "null" : dtr["Usu_Ult_Mod"] as string;
+                    objPacienteBE.Est_pac = (short)((dtr["Est_pac"] == DBNull.Value) ?
+                        1 : Convert.ToInt16(dtr["Est_pac"]));
+                    objPacienteBE.Estado = (dtr["Usu_Ult_Mod"] == DBNull.Value) ?
+                        "Activo" : dtr["Estado"] as string;
 
                 }
                 //Cerramos el dtr y devolvemos la instancia de la entidad de negocios

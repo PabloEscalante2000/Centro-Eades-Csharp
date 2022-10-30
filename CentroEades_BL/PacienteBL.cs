@@ -27,7 +27,7 @@ namespace CentroEades_BL
             return objPacienteADO.EliminarPaciente(strcod, strUsuario);
         }
 
-        public PacienteBE ConsultarProfesional(String strcod)
+        public PacienteBE ConsultarPaciente(String strcod)
         {
             return objPacienteADO.ConsultarPaciente(strcod);
         }

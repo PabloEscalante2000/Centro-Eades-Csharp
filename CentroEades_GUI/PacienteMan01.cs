@@ -61,6 +61,19 @@ namespace CentroEades_GUI
         private void btnActualizar_Click(object sender, EventArgs e)
         {
 
+            try
+            {
+                PacienteMan03 objPacienteMan03 = new PacienteMan03();
+                objPacienteMan03.Codigo = dtgPacientes.CurrentRow.Cells[0].Value.ToString();
+                objPacienteMan03.ShowDialog();
+
+                dtv = new DataView(objPacienteBL.ListarPaciente());
+                CargarDatos(txtFiltro.Text.Trim());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

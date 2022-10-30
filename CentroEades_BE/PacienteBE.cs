@@ -28,6 +28,6 @@ namespace CentroEades_BE
         public DateTime Fech_Ult_Mod { get; set; }
         public String Usu_Ult_Mod { get; set; }
         public Int16 Est_pac { get; set; }
-        public Int16 Estado { get; set; }
+        public String Estado { get; set; }
     }
 }
