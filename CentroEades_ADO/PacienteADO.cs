@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -68,7 +67,6 @@ namespace CentroEades_ADO
 
 
         }
-
         public Boolean ActualizarPaciente(PacienteBE objPacienteBE)
         {
 
@@ -78,9 +76,10 @@ namespace CentroEades_ADO
                 cmd.Connection = cnx;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "usp_ActualizarPaciente";
+                //Agregamos parametros 
                 cmd.Parameters.Clear();
-                //Pasamos los parametros al SP desde las propiedades de la entidad de negocios
-                cmd.Parameters.AddWithValue("@vcod", objPacienteBE.Cod_apo);
+                //Pasamos los parametros al SP desde las propiedades de la entidad de negocios.
+                cmd.Parameters.AddWithValue("@vcod", objPacienteBE.Cod_pac);
                 cmd.Parameters.AddWithValue("@vCod_apo", objPacienteBE.Cod_apo);
                 cmd.Parameters.AddWithValue("@vId_Ubigeo", objPacienteBE.Id_Ubigeo);
                 cmd.Parameters.AddWithValue("@vNom", objPacienteBE.Nom_pac);
@@ -105,8 +104,6 @@ namespace CentroEades_ADO
             {
                 throw new Exception(x.Message);
                 return false;
-
-
             }
             finally
             {
@@ -131,7 +128,7 @@ namespace CentroEades_ADO
                 cmd.CommandText = "usp_EliminarPaciente";
                 //Agregamos parametros
                 cmd.Parameters.Clear();
-                //Para eliminar un profesional solo se requiere saber el codigo
+                //Para eliminar un apoderado solo se requiere saber el codigo
                 cmd.Parameters.AddWithValue("@vcod", strCodigo);
                 cmd.Parameters.AddWithValue("@Usuario", strUsuario);
                 //Abrimos conexion y ejecutamos
@@ -168,9 +165,9 @@ namespace CentroEades_ADO
                 cmd.CommandText = "usp_ConsultarPaciente";
                 //limpiamos los parametros
                 cmd.Parameters.Clear();
-                //Para la consulta de un profesional solo se requiere el codigo del profesional
+                //Para la consulta de un proveedor solo se requiere el codigo del proveedor
                 cmd.Parameters.AddWithValue("@vCod_pac", strCodigo);
-                //abrimos conexion y ejecutamos
+                //abrmos conexion y ejecutamos
                 cnx.Open();
                 dtr = cmd.ExecuteReader();
                 if (dtr.HasRows == true)
@@ -178,52 +175,30 @@ namespace CentroEades_ADO
                     dtr.Read();
                     //Asignamos las columnas del dtr a las propiedades de la instancia
                     //con solo los datos que deseemos mostrar en la consulta
-                    objPacienteBE.Cod_pac 
-                        = (dtr["Cod_pac"] == DBNull.Value) ? "P002": dtr["Cod_pac"].ToString();
-                    objPacienteBE.Cod_apo = (dtr["Cod_apo"] == DBNull.Value) ?
-                        "null" : dtr["Cod_apo"] as string;
-                    objPacienteBE.Nom_pac = (dtr["Nom_pac"] == DBNull.Value) ?
-                        "null" : dtr["Nom_pac"] as string;
-                    objPacienteBE.Ape_pac = (dtr["Ape_pac"] == DBNull.Value) ?
-                        "null" : dtr["Ape_pac"] as string;
-                    objPacienteBE.Dir_pac = (dtr["Dir_pac"] == DBNull.Value) ?
-                        "null" : dtr["Dir_pac"] as string;
-                    objPacienteBE.Id_Ubigeo = (dtr["Id_Ubigeo"] == DBNull.Value) ?
-                        "010101" : dtr["Id_Ubigeo"] as string;
-                    objPacienteBE.Dni_pac = (dtr["Dni_pac"] == DBNull.Value) ?
-                        "null" : dtr["Dni_pac"] as string;
-                    objPacienteBE.Sexo = (dtr["Nom_pac"] == DBNull.Value) ?
-                        "M" : dtr["Nom_pac"] as string;
-                    objPacienteBE.Tel_pac = (dtr["Tel_pac"] == DBNull.Value) ?
-                        "null" : dtr["Tel_pac"] as string;
-
-                    //Pasar la imagen
-                    if (dtr["Foto_pac"] == DBNull.Value)
-                    {
-                        objPacienteBE.Foto_pac = null;
-                    }
-                    else
-                    {
-                        Byte[] archivo = (byte[])dtr["Foto_pac"];
-                        objPacienteBE.Foto_pac = archivo;
-                    }
+                    objPacienteBE.Cod_pac = dtr["Cod_pac"].ToString();
+                    objPacienteBE.Cod_apo = dtr["Cod_apo"].ToString();
+                    objPacienteBE.Nom_pac = dtr["Nom_pac"].ToString();
+                    objPacienteBE.Ape_pac = dtr["Ape_pac"].ToString();
+                    objPacienteBE.Dir_pac = dtr["Dir_pac"].ToString();
+                    objPacienteBE.Dni_pac = dtr["Dni_pac"].ToString();
+                    objPacienteBE.Id_Ubigeo = dtr["Id_Ubigeo"].ToString();
+                    objPacienteBE.Departamento = dtr["Departamento"].ToString();
+                    objPacienteBE.Provincia = dtr["Provincia"].ToString();
+                    objPacienteBE.Distrito = dtr["Distrito"].ToString();
+                    objPacienteBE.Tel_pac = dtr["Tel_pac"].ToString();
+                    objPacienteBE.Sexo = dtr["Sexo"].ToString();
+                    //objPacienteBE.Sexo_Pac = dtr["Sexo_Pac"].ToString();
+                    objPacienteBE.Fec_nac = Convert.ToDateTime(dtr["Fec_nac"]);
+                    objPacienteBE.Foto_pac = (Byte[])(dtr["Foto_pac"]);
+                    objPacienteBE.Fec_reg = Convert.ToDateTime(dtr["Fec_reg"]);
+                    objPacienteBE.Usu_Registro = dtr["Usu_Registro"].ToString();
+                    //objPacienteBE.Fech_Ult_Mod = Convert.ToDateTime(dtr["Fech_Ult_Mod"]);
+                    //objPacienteBE.Usu_Ult_Mod = dtr["Usu_Ult_Mod"].ToString();
+                    objPacienteBE.Est_pac = Convert.ToInt16(dtr["Est_pac"]);
                     
-
-                    objPacienteBE.Fec_reg = (dtr["Fec_reg"] == DBNull.Value) ?
-                       DateTime.Now  : Convert.ToDateTime(dtr["Fec_reg"]);
-                    objPacienteBE.Fec_nac = (dtr["Fec_nac"] == DBNull.Value) ?
-                        DateTime.Now : Convert.ToDateTime(dtr["Fec_nac"]);
-                    objPacienteBE.Usu_Registro = (dtr["Usu_registro"] == DBNull.Value) ?
-                        "null" : dtr["Usu_registro"] as string;
-                    objPacienteBE.Fech_Ult_Mod = (dtr["Fech_Ult_Mod"] == DBNull.Value) ?
-                        DateTime.Now :  Convert.ToDateTime(dtr["Fech_Ult_Mod"]);
-                    objPacienteBE.Usu_Ult_Mod = (dtr["Usu_Ult_Mod"] == DBNull.Value) ?
-                        "null" : dtr["Usu_Ult_Mod"] as string;
-                    objPacienteBE.Est_pac = (short)((dtr["Est_pac"] == DBNull.Value) ?
-                        1 : Convert.ToInt16(dtr["Est_pac"]));
-                    objPacienteBE.Estado = (dtr["Usu_Ult_Mod"] == DBNull.Value) ?
-                        "Activo" : dtr["Estado"] as string;
-
+                    
+                    
+                    
                 }
                 //Cerramos el dtr y devolvemos la instancia de la entidad de negocios
                 dtr.Close();
@@ -271,5 +246,6 @@ namespace CentroEades_ADO
             }
 
         }
+
     }
 }

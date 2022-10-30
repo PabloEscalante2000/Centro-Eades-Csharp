@@ -81,26 +81,5 @@ namespace CentroEades_ADO
                 throw new Exception(ex.Message);
             }
         }
-
-        public DataTable Ubigeo_Listar()
-        {
-            DataSet dts = new DataSet();
-            try
-            {
-                cnx.ConnectionString = MiConexion.GetCnx();
-                cmd.Connection = cnx;
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "usp_ListarUbigeo_Def";
-                cmd.Parameters.Clear();
-                SqlDataAdapter miada;
-                miada = new SqlDataAdapter(cmd);
-                miada.Fill(dts, "Ubigeos");
-                return dts.Tables["Ubigeos"];
-            }
-            catch(SqlException ex)
-            {
-                throw new Exception(ex.Message);
-            }
-        }
     }
 }

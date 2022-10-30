@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//Ensamblando...
 using CentroEades_BL;
 
 namespace CentroEades_GUI
@@ -20,30 +19,33 @@ namespace CentroEades_GUI
         {
             InitializeComponent();
         }
-
         public void CargarDatos(String strFiltro)
-        { 
+        {
+            // Construimos el dataview en base al datatable devuelto por el metodo ListarCategoria
             dtv = new DataView(objPacienteBL.ListarPaciente());
-            dtv.RowFilter = "Nom_pac like '%" + strFiltro + "%'";
+            // Y se filtra el dataview segun la cadena strFiltro recibido como parametro
+            dtv.RowFilter = "Ape_pac like  '%" + strFiltro + "%'";
+            // Se enlaza el datagrid al dataview ya filtrado
             dtgPacientes.DataSource = dtv;
+            // Mostramos la cantidad de filas filtradas
             lblRegistros.Text = dtgPacientes.Rows.Count.ToString();
         }
-
-        private void btnInsertar_Click(object sender, EventArgs e)
-        {
-            PacienteMan02 objPacienteMan02 = new PacienteMan02();
-            objPacienteMan02.ShowDialog();
-
-            //Refresacar la grilla
-            CargarDatos(txtFiltro.Text.Trim());
-        }
-
         private void PacienteMan01_Load(object sender, EventArgs e)
         {
-            CargarDatos("");
+            try
+            {
+                // Configuramos el datagrid para que no se generen columnas automaticamente
+                dtgPacientes.AutoGenerateColumns = false;
+                // Invocamos al metodo para cargar los datos              
+                CargarDatos("");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message);
+            }
         }
 
-        private void txtFiltro_TextChanged(object sender, EventArgs e)
+        private void textFiltro_TextChanged(object sender, EventArgs e)
         {
             try
             {
@@ -58,21 +60,46 @@ namespace CentroEades_GUI
             }
         }
 
-        private void btnActualizar_Click(object sender, EventArgs e)
+        private void btnInsertar_Click(object sender, EventArgs e)
         {
-
             try
             {
-                PacienteMan03 objPacienteMan03 = new PacienteMan03();
-                objPacienteMan03.Codigo = dtgPacientes.CurrentRow.Cells[0].Value.ToString();
-                objPacienteMan03.ShowDialog();
+                // Creamos una instancia de CategoriaMan02 y lo mostramos de manera modal
+                PacienteMan02 pacMan02 = new PacienteMan02();
+                pacMan02.ShowDialog();
 
+                // Al retornar, refrescamos la vista y cargamos los datos para visualizar
+                // al Categoria agregado
+                dtv = new DataView(objPacienteBL.ListarPaciente());
+                CargarDatos(txtFiltro.Text.Trim());
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error : " + ex.Message);
+
+            }
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                PacienteMan03 pacMan03 = new PacienteMan03();
+                // Se toma el valor de la columna cero de la fila seleccionada en el
+                // datagridview ....
+                pacMan03.Codigo = dtgPacientes.CurrentRow.Cells[0].Value.ToString();
+                pacMan03.ShowDialog();
+
+                // Al retornar, refrescamos la vista y cargamos los datos para ver los
+                // cambios del Categoria actualizado
                 dtv = new DataView(objPacienteBL.ListarPaciente());
                 CargarDatos(txtFiltro.Text.Trim());
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error : " + ex.Message);
+
             }
         }
 
@@ -81,25 +108,25 @@ namespace CentroEades_GUI
             try
             {
                 DialogResult vrpta;
-                vrpta = MessageBox.Show("Seguro de eliminar el registro", "Confirmar",
+                vrpta = MessageBox.Show("Seguro de eliminar registro?", "Confirmar",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (vrpta == DialogResult.Yes)
                 {
                     if (objPacienteBL.EliminarPaciente
-                        (dtgPacientes.CurrentRow.Cells[0].Value.ToString(),
-                        clsCredenciales.Usuario) == true)
+                        (dtgPacientes.CurrentRow.Cells[0].Value.ToString(), clsCredenciales.Usuario) == true)
                     {
                         CargarDatos(txtFiltro.Text.Trim());
                     }
                     else
                     {
-                        throw new Exception("Registro no se pudo eliminar contacte con TI");
+                        throw new Exception("Registro no se pudo eliminar . Contacte con TI");
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
+
                 MessageBox.Show("Error:" + ex.Message);
             }
         }

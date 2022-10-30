@@ -1,145 +1,131 @@
-﻿using System;
+﻿using CentroEades_BL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//Agregar...
 using CentroEades_BE;
-using CentroEades_BL;
 
 namespace CentroEades_GUI
 {
     public partial class PacienteMan02 : Form
     {
-
-        //Instancias...
-        PacienteBE objPacienteBE = new PacienteBE();
         PacienteBL objPacienteBL = new PacienteBL();
-        UbigeoBL objUbigeoBL = new UbigeoBL();
-        ApoderadoBL objApoderadoBL = new ApoderadoBL();
-        MemoryStream archivoMemoria = new MemoryStream();
-
+        PacienteBE objPacienteBE = new PacienteBE();
         public PacienteMan02()
         {
             InitializeComponent();
         }
 
-        private void PacienteMan02_Load(object sender, EventArgs e)
+        private void btnCargar_Click(object sender, EventArgs e)
         {
             try
             {
-                //llenamos cboApoderado
+                openFileDialog1.FileName = String.Empty;
+                openFileDialog1.Multiselect = false;
+                openFileDialog1.ShowDialog();
 
-                DataTable dt = objApoderadoBL.ListarApoderado();
-                DataRow dr;
-
-                dr = dt.NewRow();
-                dt.Columns.Add("res", typeof(string));
-
-                foreach (DataRow new_apo in dt.Rows)
+                // Si se escogio una foto se carga en el picture Box
+                if (openFileDialog1.FileName != String.Empty)
                 {
-                    new_apo["res"] = new_apo["Nom_apo"] + " " +
-                        new_apo["Ape_apo"];
+                    pcbFoto.Image = Image.FromFile(openFileDialog1.FileName);
                 }
-
-                dr["Cod_apo"] = "-";
-                dr["res"] = "--Seleccione--";
-                dt.Rows.InsertAt(dr, 0);
-                cboApoderado.DataSource = dt;
-                cboApoderado.DisplayMember = "res";
-                cboApoderado.ValueMember = "Cod_apo";
-
-                //llenamos cboUbigeo
-
-                dt = objUbigeoBL.Ubigeo_Listar();
-                dt.Columns.Add("res", typeof(string));
-
-                foreach (DataRow new_dr in dt.Rows)
-                {
-                    new_dr["res"] = new_dr["Departamento"] +
-                        " - " + new_dr["Provincia"] + " - "
-                        + new_dr["Distrito"];
-                }
-                dr = dt.NewRow();
-                dr["Id_Ubigeo"] = "-";
-                dr["res"] = "--Seleccione--";
-                dt.Rows.InsertAt(dr, 0);
-                cboUbigeo.DataSource = dt;
-                cboUbigeo.DisplayMember = "res";
-                cboUbigeo.ValueMember = "Id_Ubigeo";
-
-                // llenamos el cboSexo
-
-                cboSexo.Items.Add("M");
-                cboSexo.Items.Add("F");
-
-                cboSexo.SelectedIndex = 0;
 
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Error:" + ex.Message);
+
+                throw;
             }
         }
 
-        private void cboUbigeoDepa_SelectedIndexChanged(object sender, EventArgs e)
+        private void CargarUbigeo(String IdDepa, String IdProv, String IdDist)
         {
+            UbigeoBL objUbigeoBL = new UbigeoBL();
+            cboDepartamento.DataSource = objUbigeoBL.Ubigeo_Departamentos();
+            cboDepartamento.ValueMember = "IdDepa";
+            cboDepartamento.DisplayMember = "Departamento";
+            cboDepartamento.SelectedValue = IdDepa;
 
+            cboProvincia.DataSource = objUbigeoBL.Ubigeo_ProvinciasDepartamento(IdDepa);
+            cboProvincia.ValueMember = "IdProv";
+            cboProvincia.DisplayMember = "Provincia";
+            cboProvincia.SelectedValue = IdProv;
+
+            cboDistrito.DataSource = objUbigeoBL.Ubigeo_DistritosProvinciaDepartamento(IdDepa, IdProv);
+            cboDistrito.ValueMember = "IdDist";
+            cboDistrito.DisplayMember = "Distrito";
+            cboDistrito.SelectedValue = IdDist;
         }
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
             try
             {
-                if (cboApoderado.SelectedIndex == 0 || cboUbigeo.SelectedIndex == 0)
+                // Validar nombres , apellidos y dni
+                if (txtNombres.Text.Trim() == String.Empty)
                 {
-                    throw new Exception("Tienes que ingresar un apoderado y ubigeo");
+                    throw new Exception("El nombre es obligatorio.");
                 }
-                if (txtNombre.Text.Trim() == String.Empty || txtApellido.Text.Trim() == String.Empty
-                    || txtTelefono.Text.Trim() == String.Empty)
+                if (txtApellidos.Text.Trim() == String.Empty)
                 {
-                    throw new Exception("Tienes que ingresar un un nombre, apellido y telefono");
+                    throw new Exception("Los apellido es obligatorio.");
                 }
-                if (txtDireccion.Text.Trim() == String.Empty || mtbDNI.MaskFull == false)
+                if (mskDni.Text.Trim() == String.Empty)
                 {
-                    throw new Exception("Tienes que tener sus datos correctos");
+                    throw new Exception("El DNI es obligatorio.");
                 }
-                if (mtbFecNac.MaskFull == false)
+                // Validamos foto
+                if (pcbFoto.Image == null)
                 {
-                    throw new Exception("Tiene que ingresar una fecha");
+                    throw new Exception("Debe registrar la foto.");
                 }
+                // Pasamos los valores a las propiedades de la instancia...
+                objPacienteBE.Cod_apo = txtCod_apo.Text.Trim();
+                objPacienteBE.Nom_pac = txtNombres.Text.Trim();
+                objPacienteBE.Ape_pac = txtApellidos.Text.Trim();
+                objPacienteBE.Dir_pac = txtDir.Text.Trim();
+                objPacienteBE.Dni_pac = mskDni.Text.Trim();
+                objPacienteBE.Tel_pac = txtTel.Text.Trim();
+                //Recuerde que el IdUbiigeo es la concatenacion de los valores del Id Departamento,
+                //Id Provinca y Id Distrito seleccionados desde los respectivos combos
+                objPacienteBE.Id_Ubigeo = cboDepartamento.SelectedValue.ToString() +
+                                            cboProvincia.SelectedValue.ToString() +
+                                            cboDistrito.SelectedValue.ToString();
 
-                objPacienteBE.Cod_apo = cboApoderado.SelectedValue.ToString();
-                objPacienteBE.Id_Ubigeo = cboUbigeo.SelectedValue.ToString();
-                objPacienteBE.Nom_pac = txtNombre.Text.Trim();
-                objPacienteBE.Ape_pac = txtApellido.Text.Trim();
-                objPacienteBE.Dir_pac = txtDireccion.Text.Trim();
-                objPacienteBE.Dni_pac = mtbDNI.Text.Trim();
-                objPacienteBE.Tel_pac = txtTelefono.Text.Trim();
-                objPacienteBE.Sexo = Convert.ToString(cboSexo.SelectedItem);
-                objPacienteBE.Fec_nac = Convert.ToDateTime(mtbFecNac.Text.Trim());
-                objPacienteBE.Foto_pac = archivoMemoria.GetBuffer();
+                if (optFemenino.Checked == true) 
+                {
+                    objPacienteBE.Sexo = Convert.ToString('F'); 
+                }
+                if (optMasculino.Checked == true)
+                {
+                    objPacienteBE.Sexo = Convert.ToString('M');
+                }
+                objPacienteBE.Fec_nac = Convert.ToDateTime(mskFech_nac.Text.Trim());
+                
+                // Convertimos la foto en un arreglo de Bytes y lo almacenamos en su respectiva propiedad
+                objPacienteBE.Foto_pac = File.ReadAllBytes(openFileDialog1.FileName);
                 objPacienteBE.Usu_Registro = clsCredenciales.Usuario;
-                objPacienteBE.Est_pac = (short)(chkActivo.Checked == true ? 1 : 0);
+                objPacienteBE.Est_pac = Convert.ToInt16(chkEstado.Checked);
 
+                // Insertamos el registro de nueva categoria...
                 if (objPacienteBL.InsertarPaciente(objPacienteBE) == true)
                 {
                     this.Close();
                 }
                 else
                 {
-                    throw new Exception("No se inserto el registro. Contacte con Administrador del Sistema.");
+                    throw new Exception("No se inserto el registro. Contacte con Administrador de Sistema.");
                 }
             }
             catch (Exception ex)
             {
-                throw new Exception("Error: " + ex.Message);
+                MessageBox.Show("Se ha producido el error: " + ex.Message);
             }
         }
 
@@ -148,17 +134,35 @@ namespace CentroEades_GUI
             this.Close();
         }
 
-        private void btnCargar_Click(object sender, EventArgs e)
+        private void PacienteMan02_Load(object sender, EventArgs e)
         {
-            OpenFileDialog dialogo = new OpenFileDialog();
-            DialogResult resultado = dialogo.ShowDialog();
-            if (resultado == DialogResult.OK)
+            try
             {
-                pctFoto.Image = Image.FromFile(dialogo.FileName);
-                pctFoto.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                // Cargamos los combos de Ubigeo
+                // Por defecto elegiremos Lima, Lima , Lima (14,01,01)
+                CargarUbigeo("14", "01", "01");
             }
 
-            pctFoto.Image.Save(archivoMemoria, ImageFormat.Bmp);
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error : " + ex.Message);
+
+            }
+        }
+
+        private void cboDepartamento_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            // Refrescamos los combos con la primera provincia y el primer distrito de esa
+            //provincia para el departamento seleccionado del combo cboDepartamento.
+            CargarUbigeo(cboDepartamento.SelectedValue.ToString(), "01", "01");
+        }
+
+        private void cboProvincia_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            // Refrescamos los combos con el primer distrito para el departamento y
+            //provincia seleccionado del combo cboDepartamento y cboProvincia.
+            CargarUbigeo(cboDepartamento.SelectedValue.ToString(), cboProvincia.SelectedValue.ToString(), "01");
         }
     }
 }

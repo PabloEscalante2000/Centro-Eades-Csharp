@@ -11,7 +11,7 @@ namespace CentroEades_BL
 {
     public class PacienteBL
     {
-        //Creamos una instancia de la clse PacienteADO para invocar sus metodos.
+        //Creamos una instancia de la clse ApoderadoADO para invocar sus metodos.
         PacienteADO objPacienteADO = new PacienteADO();
 
         public Boolean InsertarPaciente(PacienteBE objPacienteBE)
