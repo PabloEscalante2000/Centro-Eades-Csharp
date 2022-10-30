@@ -43,3 +43,18 @@ D:\ISIL CARRERA CONTINUACION\AportesRhodasEades\AvancePersonal\CentroEades_ADO\o
 D:\ISIL CARRERA CONTINUACION\AportesRhodasEades\AvancePersonal\CentroEades_ADO\obj\Debug\net6.0\refint\CentroEades_ADO.dll
 D:\ISIL CARRERA CONTINUACION\AportesRhodasEades\AvancePersonal\CentroEades_ADO\obj\Debug\net6.0\CentroEades_ADO.pdb
 D:\ISIL CARRERA CONTINUACION\AportesRhodasEades\AvancePersonal\CentroEades_ADO\obj\Debug\net6.0\ref\CentroEades_ADO.dll
+C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_ADO\bin\Debug\net6.0\CentroEades_ADO.deps.json
+C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_ADO\bin\Debug\net6.0\CentroEades_ADO.dll
+C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_ADO\bin\Debug\net6.0\CentroEades_ADO.pdb
+C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_ADO\bin\Debug\net6.0\CentroEades_BE.dll
+C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_ADO\bin\Debug\net6.0\CentroEades_BE.pdb
+C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_ADO\obj\Debug\net6.0\CentroEades_ADO.csproj.AssemblyReference.cache
+C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_ADO\obj\Debug\net6.0\CentroEades_ADO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_ADO\obj\Debug\net6.0\CentroEades_ADO.AssemblyInfoInputs.cache
+C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_ADO\obj\Debug\net6.0\CentroEades_ADO.AssemblyInfo.cs
+C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_ADO\obj\Debug\net6.0\CentroEades_ADO.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_ADO\obj\Debug\net6.0\CentroEades_ADO.csproj.CopyComplete
+C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_ADO\obj\Debug\net6.0\CentroEades_ADO.dll
+C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_ADO\obj\Debug\net6.0\refint\CentroEades_ADO.dll
+C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_ADO\obj\Debug\net6.0\CentroEades_ADO.pdb
+C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_ADO\obj\Debug\net6.0\ref\CentroEades_ADO.dll

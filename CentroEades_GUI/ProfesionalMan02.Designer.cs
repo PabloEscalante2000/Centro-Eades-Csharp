@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfesionalMan02));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cboEspecialidad = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGrabar = new System.Windows.Forms.Button();
@@ -40,7 +41,6 @@
             this.mskSueldo = new System.Windows.Forms.MaskedTextBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.txtNombres = new System.Windows.Forms.TextBox();
-            this.txtId_Esp = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -54,6 +54,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cboEspecialidad);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.btnCancelar);
             this.groupBox1.Controls.Add(this.btnGrabar);
@@ -64,7 +65,6 @@
             this.groupBox1.Controls.Add(this.mskSueldo);
             this.groupBox1.Controls.Add(this.txtApellidos);
             this.groupBox1.Controls.Add(this.txtNombres);
-            this.groupBox1.Controls.Add(this.txtId_Esp);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
@@ -79,6 +79,15 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
+            // 
+            // cboEspecialidad
+            // 
+            this.cboEspecialidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEspecialidad.FormattingEnabled = true;
+            this.cboEspecialidad.Location = new System.Drawing.Point(142, 16);
+            this.cboEspecialidad.Name = "cboEspecialidad";
+            this.cboEspecialidad.Size = new System.Drawing.Size(197, 23);
+            this.cboEspecialidad.TabIndex = 12;
             // 
             // label9
             // 
@@ -168,13 +177,6 @@
             this.txtNombres.Size = new System.Drawing.Size(197, 23);
             this.txtNombres.TabIndex = 1;
             // 
-            // txtId_Esp
-            // 
-            this.txtId_Esp.Location = new System.Drawing.Point(142, 21);
-            this.txtId_Esp.Name = "txtId_Esp";
-            this.txtId_Esp.Size = new System.Drawing.Size(100, 23);
-            this.txtId_Esp.TabIndex = 0;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -243,9 +245,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(19, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 15);
+            this.label1.Size = new System.Drawing.Size(78, 15);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Cod. Especialidad :";
+            this.label1.Text = "Especialidad :";
             // 
             // ProfesionalMan02
             // 
@@ -260,6 +262,7 @@
             this.Name = "ProfesionalMan02";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Insertar Profesional";
+            this.Load += new System.EventHandler(this.ProfesionalMan02_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -273,7 +276,6 @@
         private MaskedTextBox mskSueldo;
         private TextBox txtApellidos;
         private TextBox txtNombres;
-        private TextBox txtId_Esp;
         private Label label8;
         private Label label7;
         private Label label6;
@@ -288,5 +290,6 @@
         private Button btnCancelar;
         private Button btnGrabar;
         private Label label9;
+        private ComboBox cboEspecialidad;
     }
 }

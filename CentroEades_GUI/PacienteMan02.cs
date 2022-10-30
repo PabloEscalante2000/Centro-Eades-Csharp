@@ -16,6 +16,7 @@ namespace CentroEades_GUI
     {
         PacienteBL objPacienteBL = new PacienteBL();
         PacienteBE objPacienteBE = new PacienteBE();
+        ApoderadoBL objApoderadoBL = new ApoderadoBL();
         public PacienteMan02()
         {
             InitializeComponent();
@@ -68,6 +69,10 @@ namespace CentroEades_GUI
             try
             {
                 // Validar nombres , apellidos y dni
+                if (cboApoderado.SelectedIndex == 0)
+                {
+                    throw new Exception("El apoderado es obligatorio.");
+                }
                 if (txtNombres.Text.Trim() == String.Empty)
                 {
                     throw new Exception("El nombre es obligatorio.");
@@ -86,7 +91,7 @@ namespace CentroEades_GUI
                     throw new Exception("Debe registrar la foto.");
                 }
                 // Pasamos los valores a las propiedades de la instancia...
-                objPacienteBE.Cod_apo = txtCod_apo.Text.Trim();
+                objPacienteBE.Cod_apo = cboApoderado.SelectedValue.ToString();
                 objPacienteBE.Nom_pac = txtNombres.Text.Trim();
                 objPacienteBE.Ape_pac = txtApellidos.Text.Trim();
                 objPacienteBE.Dir_pac = txtDir.Text.Trim();
@@ -142,6 +147,28 @@ namespace CentroEades_GUI
                 // Cargamos los combos de Ubigeo
                 // Por defecto elegiremos Lima, Lima , Lima (14,01,01)
                 CargarUbigeo("14", "01", "01");
+
+                //llenamos el cboApoderado
+                DataTable dt = objApoderadoBL.ListarApoderado();
+
+                dt.Columns.Add("res", typeof(string));
+
+                foreach (DataRow d in dt.Rows)
+                {
+                    d["res"] = d["Nom_apo"] + " " + d["ape_apo"];
+                }
+
+                DataRow dr;
+
+                dr = dt.NewRow();
+                dr["Cod_apo"] = "-";
+                dr["res"] = "--Seleccionar--";
+
+                dt.Rows.InsertAt(dr, 0);
+                cboApoderado.DataSource = dt;
+                cboApoderado.DisplayMember = "res";
+                cboApoderado.ValueMember = "Cod_apo";
+
             }
 
             catch (Exception ex)

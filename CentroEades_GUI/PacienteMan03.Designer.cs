@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PacienteMan03));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cboApoderado = new System.Windows.Forms.ComboBox();
             this.pcbFoto = new System.Windows.Forms.PictureBox();
             this.btnCargar = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
@@ -47,7 +48,6 @@
             this.mskDni = new System.Windows.Forms.MaskedTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtCod_apo = new System.Windows.Forms.TextBox();
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -70,6 +70,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cboApoderado);
             this.groupBox1.Controls.Add(this.pcbFoto);
             this.groupBox1.Controls.Add(this.btnCargar);
             this.groupBox1.Controls.Add(this.label12);
@@ -85,7 +86,6 @@
             this.groupBox1.Controls.Add(this.mskDni);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.txtCod_apo);
             this.groupBox1.Controls.Add(this.txtNombres);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label8);
@@ -106,6 +106,15 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
+            // 
+            // cboApoderado
+            // 
+            this.cboApoderado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboApoderado.FormattingEnabled = true;
+            this.cboApoderado.Location = new System.Drawing.Point(111, 57);
+            this.cboApoderado.Name = "cboApoderado";
+            this.cboApoderado.Size = new System.Drawing.Size(224, 23);
+            this.cboApoderado.TabIndex = 35;
             // 
             // pcbFoto
             // 
@@ -269,15 +278,6 @@
             this.label9.TabIndex = 29;
             this.label9.Text = "Telefono :";
             // 
-            // txtCod_apo
-            // 
-            this.txtCod_apo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCod_apo.Location = new System.Drawing.Point(111, 62);
-            this.txtCod_apo.MaxLength = 4;
-            this.txtCod_apo.Name = "txtCod_apo";
-            this.txtCod_apo.Size = new System.Drawing.Size(80, 23);
-            this.txtCod_apo.TabIndex = 1;
-            // 
             // txtNombres
             // 
             this.txtNombres.Location = new System.Drawing.Point(111, 91);
@@ -290,9 +290,9 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(16, 65);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(97, 15);
+            this.label13.Size = new System.Drawing.Size(72, 15);
             this.label13.TabIndex = 17;
-            this.label13.Text = "Cod Apoderado :";
+            this.label13.Text = "Apoderado :";
             // 
             // label8
             // 
@@ -454,8 +454,8 @@
         private Label label7;
         private PictureBox pcbFoto;
         private Button btnCargar;
-        private TextBox txtCod_apo;
         private Label label13;
         private OpenFileDialog openFileDialog1;
+        private ComboBox cboApoderado;
     }
 }

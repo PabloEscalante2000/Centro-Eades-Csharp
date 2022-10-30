@@ -38,7 +38,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.txtId_Esp = new System.Windows.Forms.TextBox();
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.btnGrabar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,11 +50,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.cboEspecialidad = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cboEspecialidad);
             this.groupBox1.Controls.Add(this.txtEmail);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label10);
@@ -64,7 +65,6 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.btnCancelar);
-            this.groupBox1.Controls.Add(this.txtId_Esp);
             this.groupBox1.Controls.Add(this.txtNombres);
             this.groupBox1.Controls.Add(this.btnGrabar);
             this.groupBox1.Controls.Add(this.label1);
@@ -157,13 +157,6 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // txtId_Esp
-            // 
-            this.txtId_Esp.Location = new System.Drawing.Point(127, 63);
-            this.txtId_Esp.Name = "txtId_Esp";
-            this.txtId_Esp.Size = new System.Drawing.Size(189, 23);
-            this.txtId_Esp.TabIndex = 18;
-            // 
             // txtNombres
             // 
             this.txtNombres.Location = new System.Drawing.Point(127, 101);
@@ -213,9 +206,9 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(11, 66);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(103, 15);
+            this.label9.Size = new System.Drawing.Size(78, 15);
             this.label9.TabIndex = 15;
-            this.label9.Text = "Cod Especialidad :";
+            this.label9.Text = "Especialidad :";
             // 
             // label8
             // 
@@ -268,6 +261,15 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "DNI :";
             // 
+            // cboEspecialidad
+            // 
+            this.cboEspecialidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEspecialidad.FormattingEnabled = true;
+            this.cboEspecialidad.Location = new System.Drawing.Point(127, 58);
+            this.cboEspecialidad.Name = "cboEspecialidad";
+            this.cboEspecialidad.Size = new System.Drawing.Size(189, 23);
+            this.cboEspecialidad.TabIndex = 26;
+            // 
             // ProfesionalMan03
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -303,7 +305,6 @@
         private Label label4;
         private TextBox txtApellidos;
         private Label label6;
-        private TextBox txtId_Esp;
         private Label label9;
         private MaskedTextBox mskSueldo;
         private Label label5;
@@ -312,5 +313,6 @@
         private Label label7;
         private TextBox txtEmail;
         private Label label11;
+        private ComboBox cboEspecialidad;
     }
 }

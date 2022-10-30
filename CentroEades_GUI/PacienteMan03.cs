@@ -16,6 +16,7 @@ namespace CentroEades_GUI
     {
         PacienteBL objPacienteBL = new PacienteBL();
         PacienteBE objPacienteBE = new PacienteBE();
+        ApoderadoBL objApoderadoBL = new ApoderadoBL();
         // Variable para determinar si se a cambiado de foto o no.
         Boolean blnCambio;
         // Array de Bytes para conservar la foto original , por si no se desea cambiarla.
@@ -31,11 +32,32 @@ namespace CentroEades_GUI
         {
             try
             {
+                //llenamos el cboApoderado
+                DataTable dt = objApoderadoBL.ListarApoderado();
+
+                dt.Columns.Add("res", typeof(string));
+
+                foreach (DataRow d in dt.Rows)
+                {
+                    d["res"] = d["Nom_apo"] + " " + d["ape_apo"];
+                }
+                
+                DataRow dr;
+                
+                dr = dt.NewRow();
+                dr["Cod_apo"] = "-";
+                dr["res"] = "--Seleccionar--";
+
+                dt.Rows.InsertAt(dr, 0);
+                cboApoderado.DataSource = dt;
+                cboApoderado.DisplayMember = "res";
+                cboApoderado.ValueMember = "Cod_apo";
+
                 // Mostramos los datos de la Categoria a actualizar
                 objPacienteBE = objPacienteBL.ConsultarPaciente(this.Codigo);
 
                 lblCod.Text = objPacienteBE.Cod_pac;
-                txtCod_apo.Text = objPacienteBE.Cod_apo;
+                cboApoderado.SelectedValue = objPacienteBE.Cod_apo;
                 txtNombres.Text = objPacienteBE.Nom_pac;
                 txtApellidos.Text = objPacienteBE.Ape_pac;
                 txtDir.Text = objPacienteBE.Dir_pac;
@@ -75,6 +97,8 @@ namespace CentroEades_GUI
                     // Guardamos la foto original , por si no se hace cambios...
                     FotoOriginal = objPacienteBE.Foto_pac;
                 }
+
+                
 
             }
             catch (Exception ex)
@@ -136,9 +160,9 @@ namespace CentroEades_GUI
             try
             {
                 // Validar descripcion
-                if (txtCod_apo.Text.Trim() == String.Empty)
+                if (cboApoderado.SelectedIndex == 0)
                 {
-                    throw new Exception("El codigode apoderado es obligatorio.");
+                    throw new Exception("El apoderado es obligatorio.");
                 }
                 if (txtNombres.Text.Trim() == String.Empty)
                 {
@@ -163,7 +187,7 @@ namespace CentroEades_GUI
                     throw new Exception("Debe registrar la foto.");
                 }
                 //Si todo esta OK , Actualizamos la entidad de negocios..
-                objPacienteBE.Cod_apo = txtCod_apo.Text.Trim();
+                objPacienteBE.Cod_apo = cboApoderado.SelectedValue.ToString();
                 objPacienteBE.Nom_pac = txtNombres.Text.Trim();
                 objPacienteBE.Ape_pac = txtApellidos.Text.Trim();
                 objPacienteBE.Dir_pac = txtDir.Text.Trim();

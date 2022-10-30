@@ -16,6 +16,7 @@ namespace CentroEades_GUI
     {
         ProfesionalBL objProfesionalBL = new ProfesionalBL();
         ProfesionalBE objProfesionalBE = new ProfesionalBE();
+        EspecialidadBL objEspecialidadBL = new EspecialidadBL();
         public ProfesionalMan03()
         {
             InitializeComponent();
@@ -29,11 +30,21 @@ namespace CentroEades_GUI
         {
             try
             {
+                //Llenamos el cboEspecialidad
+                DataTable dt = objEspecialidadBL.Listar_Ubigeo();
+                DataRow dr = dt.NewRow();
+                dr["Id_Espec"] = 0;
+                dr["Nom_Espec"] = "--Seleccione--";
+                dt.Rows.InsertAt(dr, 0);
+                cboEspecialidad.DataSource = dt;
+                cboEspecialidad.DisplayMember = "Nom_Espec";
+                cboEspecialidad.ValueMember = "Id_Espec";
+
                 //Mostramos los datos del apoderado a actualizar
                 objProfesionalBE = objProfesionalBL.ConsultarProfesional(this.Codigo);
 
                 lblCodigo.Text = objProfesionalBE.Cod_pro;
-                txtId_Esp.Text = Convert.ToString(objProfesionalBE.Id_Espec);
+                cboEspecialidad.SelectedValue = Convert.ToString(objProfesionalBE.Id_Espec);
                 txtNombres.Text = objProfesionalBE.Nom_pro;
                 txtApellidos.Text = objProfesionalBE.Ape_pro;
                 mskSueldo.Text = Convert.ToString(objProfesionalBE.Sue_pro);
@@ -53,9 +64,9 @@ namespace CentroEades_GUI
             try
             {
                 //Validamos el cod. Especialidad, nombre , apellidos ,sueldo y el dni
-                if (txtId_Esp.Text.Trim() == String.Empty)
+                if (cboEspecialidad.SelectedIndex == 0)
                 {
-                    throw new Exception("El Codigo de Especialidad es obligatorio");
+                    throw new Exception("La Especialidad es obligatoria");
                 }
                 if (txtNombres.Text.Trim() == String.Empty)
                 {
@@ -76,7 +87,7 @@ namespace CentroEades_GUI
 
 
                 //Si todo esta OK , Actualizamos la entidad de negocios..
-                objProfesionalBE.Id_Espec = Convert.ToInt16(txtId_Esp.Text);
+                objProfesionalBE.Id_Espec = Convert.ToInt16(cboEspecialidad.SelectedValue);
                 objProfesionalBE.Nom_pro= txtNombres.Text.Trim();
                 objProfesionalBE.Ape_pro = txtApellidos.Text.Trim();
                 objProfesionalBE.Sue_pro = Convert.ToSingle(mskSueldo.Text.Trim());

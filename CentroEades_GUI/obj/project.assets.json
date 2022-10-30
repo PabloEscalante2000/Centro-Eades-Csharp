@@ -797,27 +797,24 @@
   },
   "packageFolders": {
     "C:\\Users\\USUARIO\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ISIL CARRERA CONTINUACION\\AportesRhodasEades\\AvancePersonal\\CentroEades_GUI\\CentroEades_GUI.csproj",
+      "projectUniqueName": "C:\\Users\\USUARIO\\CURSOS_DE_PROGRAMACION\\Curso_Aplicaciones_I\\proyecto_final\\Centro-Eades-Csharp\\CentroEades_GUI\\CentroEades_GUI.csproj",
       "projectName": "CentroEades_GUI",
-      "projectPath": "D:\\ISIL CARRERA CONTINUACION\\AportesRhodasEades\\AvancePersonal\\CentroEades_GUI\\CentroEades_GUI.csproj",
+      "projectPath": "C:\\Users\\USUARIO\\CURSOS_DE_PROGRAMACION\\Curso_Aplicaciones_I\\proyecto_final\\Centro-Eades-Csharp\\CentroEades_GUI\\CentroEades_GUI.csproj",
       "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-      "outputPath": "D:\\ISIL CARRERA CONTINUACION\\AportesRhodasEades\\AvancePersonal\\CentroEades_GUI\\obj\\",
+      "outputPath": "C:\\Users\\USUARIO\\CURSOS_DE_PROGRAMACION\\Curso_Aplicaciones_I\\proyecto_final\\Centro-Eades-Csharp\\CentroEades_GUI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
         "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0-windows"
@@ -825,18 +822,17 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://packagesource": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "D:\\ISIL CARRERA CONTINUACION\\AportesRhodasEades\\AvancePersonal\\CentroEades_BE\\CentroEades_BE.csproj": {
-              "projectPath": "D:\\ISIL CARRERA CONTINUACION\\AportesRhodasEades\\AvancePersonal\\CentroEades_BE\\CentroEades_BE.csproj"
+            "C:\\Users\\USUARIO\\CURSOS_DE_PROGRAMACION\\Curso_Aplicaciones_I\\proyecto_final\\Centro-Eades-Csharp\\CentroEades_BE\\CentroEades_BE.csproj": {
+              "projectPath": "C:\\Users\\USUARIO\\CURSOS_DE_PROGRAMACION\\Curso_Aplicaciones_I\\proyecto_final\\Centro-Eades-Csharp\\CentroEades_BE\\CentroEades_BE.csproj"
             },
-            "D:\\ISIL CARRERA CONTINUACION\\AportesRhodasEades\\AvancePersonal\\CentroEades_BL\\CentroEades_BL.csproj": {
-              "projectPath": "D:\\ISIL CARRERA CONTINUACION\\AportesRhodasEades\\AvancePersonal\\CentroEades_BL\\CentroEades_BL.csproj"
+            "C:\\Users\\USUARIO\\CURSOS_DE_PROGRAMACION\\Curso_Aplicaciones_I\\proyecto_final\\Centro-Eades-Csharp\\CentroEades_BL\\CentroEades_BL.csproj": {
+              "projectPath": "C:\\Users\\USUARIO\\CURSOS_DE_PROGRAMACION\\Curso_Aplicaciones_I\\proyecto_final\\Centro-Eades-Csharp\\CentroEades_BL\\CentroEades_BL.csproj"
             }
           }
         }

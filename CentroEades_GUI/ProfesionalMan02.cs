@@ -17,6 +17,7 @@ namespace CentroEades_GUI
         //Instancias..
         ProfesionalBL objProfesionalBL = new ProfesionalBL();
         ProfesionalBE objProfesionalBE = new ProfesionalBE();
+        EspecialidadBL objEspecialidadBL = new EspecialidadBL();
         public ProfesionalMan02()
         {
             InitializeComponent();
@@ -25,9 +26,9 @@ namespace CentroEades_GUI
         private void btnGrabar_Click(object sender, EventArgs e)
         {
             //Validar que este lleno el Id_Espec
-            if (txtId_Esp.Text.Trim() == String.Empty)
+            if (cboEspecialidad.SelectedIndex == 0)
             {
-                throw new Exception("El codigo de la especialidad es obligatorio.");
+                throw new Exception("La especialidad es obligatoria.");
             }
             //Validar que este lleno el nombre
             if (txtNombres.Text.Trim() == String.Empty)
@@ -52,7 +53,7 @@ namespace CentroEades_GUI
 
 
             //Pasamos los valores a las propiedades de la instancia...
-            objProfesionalBE.Id_Espec = Convert.ToInt16(txtId_Esp.Text.Trim());
+            objProfesionalBE.Id_Espec = Convert.ToInt16(cboEspecialidad.SelectedValue);
             objProfesionalBE.Nom_pro = txtNombres.Text.Trim();
             objProfesionalBE.Ape_pro = txtApellidos.Text.Trim();
             objProfesionalBE.Sue_pro = Convert.ToSingle(mskSueldo.Text.Trim());
@@ -77,6 +78,19 @@ namespace CentroEades_GUI
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ProfesionalMan02_Load(object sender, EventArgs e)
+        {
+            //llenar el cboEspecialidad
+            DataTable dt = objEspecialidadBL.Listar_Ubigeo();
+            DataRow dr = dt.NewRow();
+            dr["Id_Espec"] = 0;
+            dr["Nom_Espec"] = "--Seleccione--";
+            dt.Rows.InsertAt(dr, 0);
+            cboEspecialidad.DataSource = dt;
+            cboEspecialidad.DisplayMember = "Nom_Espec";
+            cboEspecialidad.ValueMember = "Id_Espec";
         }
     }
 }

@@ -46,6 +46,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cboApoderado = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.optMasculino = new System.Windows.Forms.RadioButton();
@@ -59,7 +60,6 @@
             this.pcbFoto = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnCargar = new System.Windows.Forms.Button();
-            this.txtCod_apo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
@@ -212,6 +212,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cboApoderado);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.mskFech_nac);
@@ -231,7 +232,6 @@
             this.groupBox1.Controls.Add(this.cboDepartamento);
             this.groupBox1.Controls.Add(this.txtDir);
             this.groupBox1.Controls.Add(this.txtApellidos);
-            this.groupBox1.Controls.Add(this.txtCod_apo);
             this.groupBox1.Controls.Add(this.txtNombres);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label3);
@@ -247,6 +247,15 @@
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
+            // 
+            // cboApoderado
+            // 
+            this.cboApoderado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboApoderado.FormattingEnabled = true;
+            this.cboApoderado.Location = new System.Drawing.Point(135, 26);
+            this.cboApoderado.Name = "cboApoderado";
+            this.cboApoderado.Size = new System.Drawing.Size(224, 23);
+            this.cboApoderado.TabIndex = 17;
             // 
             // label12
             // 
@@ -373,23 +382,14 @@
             this.btnCargar.UseVisualStyleBackColor = true;
             this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
-            // txtCod_apo
-            // 
-            this.txtCod_apo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCod_apo.Location = new System.Drawing.Point(135, 31);
-            this.txtCod_apo.MaxLength = 4;
-            this.txtCod_apo.Name = "txtCod_apo";
-            this.txtCod_apo.Size = new System.Drawing.Size(47, 23);
-            this.txtCod_apo.TabIndex = 0;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(18, 34);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 15);
+            this.label2.Size = new System.Drawing.Size(72, 15);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Cod. Apoderado :";
+            this.label2.Text = "Apoderado :";
             // 
             // PacienteMan02
             // 
@@ -434,7 +434,6 @@
         private PictureBox pcbFoto;
         private Button btnCargar;
         private OpenFileDialog openFileDialog1;
-        private TextBox txtCod_apo;
         private Label label2;
         private GroupBox groupBox2;
         private RadioButton optMasculino;
@@ -446,5 +445,6 @@
         private Label label12;
         private MaskedTextBox mskFech_nac;
         private Label label11;
+        private ComboBox cboApoderado;
     }
 }
