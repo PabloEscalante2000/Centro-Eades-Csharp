@@ -46,12 +46,11 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtpFNac = new System.Windows.Forms.DateTimePicker();
             this.cboApoderado = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.optMasculino = new System.Windows.Forms.RadioButton();
             this.optFemenino = new System.Windows.Forms.RadioButton();
-            this.mskFech_nac = new System.Windows.Forms.MaskedTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtTel = new System.Windows.Forms.TextBox();
             this.mskDni = new System.Windows.Forms.MaskedTextBox();
@@ -212,10 +211,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dtpFNac);
             this.groupBox1.Controls.Add(this.cboApoderado);
-            this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.mskFech_nac);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.txtTel);
             this.groupBox1.Controls.Add(this.mskDni);
@@ -248,6 +246,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
             // 
+            // dtpFNac
+            // 
+            this.dtpFNac.CustomFormat = "dd/mm/yyyy";
+            this.dtpFNac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFNac.Location = new System.Drawing.Point(135, 414);
+            this.dtpFNac.MaxDate = new System.DateTime(2020, 12, 31, 0, 0, 0, 0);
+            this.dtpFNac.MinDate = new System.DateTime(1920, 1, 1, 0, 0, 0, 0);
+            this.dtpFNac.Name = "dtpFNac";
+            this.dtpFNac.Size = new System.Drawing.Size(200, 23);
+            this.dtpFNac.TabIndex = 18;
+            this.dtpFNac.Value = new System.DateTime(2020, 12, 31, 0, 0, 0, 0);
+            // 
             // cboApoderado
             // 
             this.cboApoderado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -256,15 +266,6 @@
             this.cboApoderado.Name = "cboApoderado";
             this.cboApoderado.Size = new System.Drawing.Size(224, 23);
             this.cboApoderado.TabIndex = 17;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(223, 420);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(87, 15);
-            this.label12.TabIndex = 14;
-            this.label12.Text = "dia / mes / año";
             // 
             // groupBox2
             // 
@@ -298,15 +299,6 @@
             this.optFemenino.TabStop = true;
             this.optFemenino.Text = "Femenino";
             this.optFemenino.UseVisualStyleBackColor = true;
-            // 
-            // mskFech_nac
-            // 
-            this.mskFech_nac.Location = new System.Drawing.Point(135, 415);
-            this.mskFech_nac.Mask = "00/00/0000";
-            this.mskFech_nac.Name = "mskFech_nac";
-            this.mskFech_nac.Size = new System.Drawing.Size(82, 23);
-            this.mskFech_nac.TabIndex = 13;
-            this.mskFech_nac.ValidatingType = typeof(System.DateTime);
             // 
             // label11
             // 
@@ -442,9 +434,8 @@
         private MaskedTextBox mskDni;
         private Label label6;
         private Label label7;
-        private Label label12;
-        private MaskedTextBox mskFech_nac;
         private Label label11;
         private ComboBox cboApoderado;
+        private DateTimePicker dtpFNac;
     }
 }

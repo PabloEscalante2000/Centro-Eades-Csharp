@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PacienteMan01));
             this.label1 = new System.Windows.Forms.Label();
             this.txtFiltro = new System.Windows.Forms.TextBox();
@@ -39,9 +40,11 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnInsertar = new System.Windows.Forms.Button();
             this.Cod_pac = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cod_apo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nom_pac = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ape_pac = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Departamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Provincia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Distrito = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,10 +82,8 @@
             this.dtgPacientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgPacientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Cod_pac,
-            this.Cod_apo,
-            this.Nom_pac,
-            this.Ape_pac,
+            this.dataGridViewTextBoxColumn4,
+            this.NombreCompleto,
             this.Departamento,
             this.Provincia,
             this.Distrito,
@@ -92,7 +93,6 @@
             this.Est_pac});
             this.dtgPacientes.Location = new System.Drawing.Point(12, 55);
             this.dtgPacientes.Name = "dtgPacientes";
-            this.dtgPacientes.ReadOnly = true;
             this.dtgPacientes.RowHeadersVisible = false;
             this.dtgPacientes.RowTemplate.Height = 25;
             this.dtgPacientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -171,77 +171,83 @@
             this.Cod_pac.DataPropertyName = "Cod_pac";
             this.Cod_pac.HeaderText = "Cod. Pac.";
             this.Cod_pac.Name = "Cod_pac";
-            this.Cod_pac.ReadOnly = true;
+            this.Cod_pac.Width = 126;
             // 
-            // Cod_apo
+            // dataGridViewTextBoxColumn1
             // 
-            this.Cod_apo.DataPropertyName = "Cod_apo";
-            this.Cod_apo.HeaderText = "Cod. Apo.";
-            this.Cod_apo.Name = "Cod_apo";
-            this.Cod_apo.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Cod_pac";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Codigo";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 126;
             // 
-            // Nom_pac
+            // dataGridViewTextBoxColumn2
             // 
-            this.Nom_pac.DataPropertyName = "Nom_pac";
-            this.Nom_pac.HeaderText = "Nombre";
-            this.Nom_pac.Name = "Nom_pac";
-            this.Nom_pac.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Cod_pac";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Codigo";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // Ape_pac
+            // dataGridViewTextBoxColumn3
             // 
-            this.Ape_pac.DataPropertyName = "Ape_pac";
-            this.Ape_pac.HeaderText = "Apellido";
-            this.Ape_pac.Name = "Ape_pac";
-            this.Ape_pac.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Codigo";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 1257;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Cod_pac";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Codigo";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // NombreCompleto
+            // 
+            this.NombreCompleto.HeaderText = "NomCompleto";
+            this.NombreCompleto.Name = "NombreCompleto";
             // 
             // Departamento
             // 
             this.Departamento.DataPropertyName = "Departamento";
             this.Departamento.HeaderText = "Departamento";
             this.Departamento.Name = "Departamento";
-            this.Departamento.ReadOnly = true;
             // 
             // Provincia
             // 
             this.Provincia.DataPropertyName = "Provincia";
             this.Provincia.HeaderText = "Provincia";
             this.Provincia.Name = "Provincia";
-            this.Provincia.ReadOnly = true;
             // 
             // Distrito
             // 
             this.Distrito.DataPropertyName = "Distrito";
             this.Distrito.HeaderText = "Distrito";
             this.Distrito.Name = "Distrito";
-            this.Distrito.ReadOnly = true;
             // 
             // Dni_pac
             // 
             this.Dni_pac.DataPropertyName = "Dni_pac";
             this.Dni_pac.HeaderText = "DNI";
             this.Dni_pac.Name = "Dni_pac";
-            this.Dni_pac.ReadOnly = true;
             // 
             // Tel_pac
             // 
             this.Tel_pac.DataPropertyName = "Tel_pac";
             this.Tel_pac.HeaderText = "Telefono";
             this.Tel_pac.Name = "Tel_pac";
-            this.Tel_pac.ReadOnly = true;
             // 
             // Foto_pac
             // 
             this.Foto_pac.DataPropertyName = "Foto_pac";
             this.Foto_pac.HeaderText = "Foto";
+            this.Foto_pac.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Foto_pac.Name = "Foto_pac";
-            this.Foto_pac.ReadOnly = true;
             // 
             // Est_pac
             // 
-            this.Est_pac.DataPropertyName = "Est_pac";
+            this.Est_pac.DataPropertyName = "Estado";
             this.Est_pac.HeaderText = "Estado";
             this.Est_pac.Name = "Est_pac";
-            this.Est_pac.ReadOnly = true;
+            this.Est_pac.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // PacienteMan01
             // 
@@ -280,9 +286,11 @@
         private Button btnEliminar;
         private Button btnInsertar;
         private DataGridViewTextBoxColumn Cod_pac;
-        private DataGridViewTextBoxColumn Cod_apo;
-        private DataGridViewTextBoxColumn Nom_pac;
-        private DataGridViewTextBoxColumn Ape_pac;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn NombreCompleto;
         private DataGridViewTextBoxColumn Departamento;
         private DataGridViewTextBoxColumn Provincia;
         private DataGridViewTextBoxColumn Distrito;

@@ -37,7 +37,6 @@
             this.chkEstado = new System.Windows.Forms.CheckBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.mskDni = new System.Windows.Forms.MaskedTextBox();
-            this.mskFecIng = new System.Windows.Forms.MaskedTextBox();
             this.mskSueldo = new System.Windows.Forms.MaskedTextBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.txtNombres = new System.Windows.Forms.TextBox();
@@ -49,11 +48,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.dtgFIng = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dtgFIng);
             this.groupBox1.Controls.Add(this.cboEspecialidad);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.btnCancelar);
@@ -61,7 +62,6 @@
             this.groupBox1.Controls.Add(this.chkEstado);
             this.groupBox1.Controls.Add(this.txtEmail);
             this.groupBox1.Controls.Add(this.mskDni);
-            this.groupBox1.Controls.Add(this.mskFecIng);
             this.groupBox1.Controls.Add(this.mskSueldo);
             this.groupBox1.Controls.Add(this.txtApellidos);
             this.groupBox1.Controls.Add(this.txtNombres);
@@ -92,7 +92,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(237, 172);
+            this.label9.Location = new System.Drawing.Point(288, 172);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(87, 15);
             this.label9.TabIndex = 11;
@@ -145,15 +145,6 @@
             this.mskDni.Name = "mskDni";
             this.mskDni.Size = new System.Drawing.Size(126, 23);
             this.mskDni.TabIndex = 5;
-            // 
-            // mskFecIng
-            // 
-            this.mskFecIng.Location = new System.Drawing.Point(142, 169);
-            this.mskFecIng.Mask = "00/00/0000";
-            this.mskFecIng.Name = "mskFecIng";
-            this.mskFecIng.Size = new System.Drawing.Size(82, 23);
-            this.mskFecIng.TabIndex = 4;
-            this.mskFecIng.ValidatingType = typeof(System.DateTime);
             // 
             // mskSueldo
             // 
@@ -249,6 +240,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Especialidad :";
             // 
+            // dtgFIng
+            // 
+            this.dtgFIng.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtgFIng.Location = new System.Drawing.Point(142, 166);
+            this.dtgFIng.Name = "dtgFIng";
+            this.dtgFIng.Size = new System.Drawing.Size(126, 23);
+            this.dtgFIng.TabIndex = 13;
+            // 
             // ProfesionalMan02
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -272,7 +271,6 @@
         #endregion
 
         private GroupBox groupBox1;
-        private MaskedTextBox mskFecIng;
         private MaskedTextBox mskSueldo;
         private TextBox txtApellidos;
         private TextBox txtNombres;
@@ -291,5 +289,6 @@
         private Button btnGrabar;
         private Label label9;
         private ComboBox cboEspecialidad;
+        private DateTimePicker dtgFIng;
     }
 }

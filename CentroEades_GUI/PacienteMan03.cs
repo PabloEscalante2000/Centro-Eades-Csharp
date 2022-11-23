@@ -72,7 +72,12 @@ namespace CentroEades_GUI
                     optMasculino.Checked = true;
                 }
                 
-                mskFech_nac.Text = Convert.ToString(objPacienteBE.Fec_nac);
+                //con el maskedTextBox
+                //mskFech_nac.Text = Convert.ToString(objPacienteBE.Fec_nac);
+
+                //Con el DateTimePicker
+                dtpFNac.Text = Convert.ToString(objPacienteBE.Fec_nac);
+
                 chkEstado.Checked = Convert.ToBoolean(objPacienteBE.Est_pac);
                 
 
@@ -176,7 +181,7 @@ namespace CentroEades_GUI
                 {
                     throw new Exception("El Dni es obligatorio.");
                 }
-                if (mskFech_nac.Text.Trim() == String.Empty)
+                if (dtpFNac.Text.Trim() == String.Empty)
                 {
                     throw new Exception("La fecha de nacimiento es obligatorio.");
                 }
@@ -201,7 +206,7 @@ namespace CentroEades_GUI
                 {
                      objPacienteBE.Sexo = "M";
                 }
-                objPacienteBE.Fec_nac = Convert.ToDateTime(mskFech_nac.Text.Trim());
+                objPacienteBE.Fec_nac = Convert.ToDateTime(dtpFNac.Text.Trim());
 
                 objPacienteBE.Usu_Ult_Mod = clsCredenciales.Usuario;
                 objPacienteBE.Est_pac = Convert.ToInt16(chkEstado.Checked);

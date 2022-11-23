@@ -159,3 +159,6 @@ C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Cent
 C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_GUI\obj\Debug\net6.0-windows\CentroEades_GUI.pdb
 C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_GUI\obj\Debug\net6.0-windows\CentroEades_GUI.genruntimeconfig.cache
 C:\Users\USUARIO\CURSOS_DE_PROGRAMACION\Curso_Aplicaciones_I\proyecto_final\Centro-Eades-Csharp\CentroEades_GUI\obj\Debug\net6.0-windows\ref\CentroEades_GUI.dll
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_GUI\obj\Debug\net6.0-windows\CentroEades_GUI.PacienteMan01.resources
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_GUI\obj\Debug\net6.0-windows\CentroEades_GUI.PacienteMan02.resources
+D:\ISIL CARRERA CONTINUACION\GITHUB_DESKTOP\CentroEadesDemo\Centro-Eades-Csharp\CentroEades_GUI\obj\Debug\net6.0-windows\CentroEades_GUI.PacienteMan03.resources

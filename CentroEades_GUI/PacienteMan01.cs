@@ -15,6 +15,7 @@ namespace CentroEades_GUI
     {
         PacienteBL objPacienteBL = new PacienteBL();
         DataView dtv;
+        
         public PacienteMan01()
         {
             InitializeComponent();
@@ -29,13 +30,38 @@ namespace CentroEades_GUI
             dtgPacientes.DataSource = dtv;
             // Mostramos la cantidad de filas filtradas
             lblRegistros.Text = dtgPacientes.Rows.Count.ToString();
+            //nueva columna
+            dtgPacientes.Columns[1].CellTemplate = new CustomCell();
+            
         }
+
+        class CustomCell: DataGridViewTextBoxCell
+        {
+            protected override object GetValue(int rowIndex)
+            {
+                DataRowView view = DataGridView.Rows[rowIndex].DataBoundItem as DataRowView;
+
+                if (view != null)
+                    return string.Format("{0} {1}", view["Nom_pac"], view["Ape_pac"]);
+
+                return null;
+
+            }
+        }
+
+
+
+
+
         private void PacienteMan01_Load(object sender, EventArgs e)
         {
             try
             {
                 // Configuramos el datagrid para que no se generen columnas automaticamente
                 dtgPacientes.AutoGenerateColumns = false;
+                
+                
+
                 // Invocamos al metodo para cargar los datos              
                 CargarDatos("");
             }

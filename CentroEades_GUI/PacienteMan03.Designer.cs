@@ -39,7 +39,6 @@
             this.optMasculino = new System.Windows.Forms.RadioButton();
             this.optFemenino = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.mskFech_nac = new System.Windows.Forms.MaskedTextBox();
             this.btnGrabar = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.lblCod = new System.Windows.Forms.Label();
@@ -63,6 +62,7 @@
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.dtpFNac = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -70,6 +70,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dtpFNac);
             this.groupBox1.Controls.Add(this.cboApoderado);
             this.groupBox1.Controls.Add(this.pcbFoto);
             this.groupBox1.Controls.Add(this.btnCargar);
@@ -77,7 +78,6 @@
             this.groupBox1.Controls.Add(this.btnCancelar);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.mskFech_nac);
             this.groupBox1.Controls.Add(this.btnGrabar);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.lblCod);
@@ -139,7 +139,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(221, 451);
+            this.label12.Location = new System.Drawing.Point(310, 451);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(87, 15);
             this.label12.TabIndex = 34;
@@ -197,15 +197,6 @@
             this.label1.Size = new System.Drawing.Size(52, 15);
             this.label1.TabIndex = 10;
             this.label1.Text = "Codigo :";
-            // 
-            // mskFech_nac
-            // 
-            this.mskFech_nac.Location = new System.Drawing.Point(133, 446);
-            this.mskFech_nac.Mask = "00/00/0000";
-            this.mskFech_nac.Name = "mskFech_nac";
-            this.mskFech_nac.Size = new System.Drawing.Size(82, 23);
-            this.mskFech_nac.TabIndex = 11;
-            this.mskFech_nac.ValidatingType = typeof(System.DateTime);
             // 
             // btnGrabar
             // 
@@ -401,6 +392,18 @@
             this.label7.TabIndex = 21;
             this.label7.Text = "Distrito :";
             // 
+            // dtpFNac
+            // 
+            this.dtpFNac.CustomFormat = "dd/mm/yyyy";
+            this.dtpFNac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFNac.Location = new System.Drawing.Point(135, 445);
+            this.dtpFNac.MaxDate = new System.DateTime(2020, 12, 31, 0, 0, 0, 0);
+            this.dtpFNac.MinDate = new System.DateTime(1920, 1, 1, 0, 0, 0, 0);
+            this.dtpFNac.Name = "dtpFNac";
+            this.dtpFNac.Size = new System.Drawing.Size(159, 23);
+            this.dtpFNac.TabIndex = 36;
+            this.dtpFNac.Value = new System.DateTime(2020, 12, 31, 0, 0, 0, 0);
+            // 
             // PacienteMan03
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -434,7 +437,6 @@
         private GroupBox groupBox2;
         private RadioButton optMasculino;
         private RadioButton optFemenino;
-        private MaskedTextBox mskFech_nac;
         private Label label10;
         private TextBox txtTel;
         private MaskedTextBox mskDni;
@@ -457,5 +459,6 @@
         private Label label13;
         private OpenFileDialog openFileDialog1;
         private ComboBox cboApoderado;
+        private DateTimePicker dtpFNac;
     }
 }

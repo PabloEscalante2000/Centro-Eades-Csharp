@@ -111,7 +111,12 @@ namespace CentroEades_GUI
                 {
                     objPacienteBE.Sexo = Convert.ToString('M');
                 }
-                objPacienteBE.Fec_nac = Convert.ToDateTime(mskFech_nac.Text.Trim());
+
+                //Con el maskeTextBox
+                //objPacienteBE.Fec_nac = Convert.ToDateTime(mskFech_nac.Text.Trim());
+
+                //Con el DateTimePicker
+                objPacienteBE.Fec_nac = Convert.ToDateTime(dtpFNac.Text.Trim());
                 
                 // Convertimos la foto en un arreglo de Bytes y lo almacenamos en su respectiva propiedad
                 objPacienteBE.Foto_pac = File.ReadAllBytes(openFileDialog1.FileName);

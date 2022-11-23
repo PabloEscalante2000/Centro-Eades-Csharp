@@ -25,53 +25,61 @@ namespace CentroEades_GUI
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-            //Validar que este lleno el Id_Espec
-            if (cboEspecialidad.SelectedIndex == 0)
+            try
             {
-                throw new Exception("La especialidad es obligatoria.");
-            }
-            //Validar que este lleno el nombre
-            if (txtNombres.Text.Trim() == String.Empty)
-            {
-                throw new Exception("El nombre del profesional es obligatorio.");
-            }
-            //Validar que este lleno el apellido
-            if (txtApellidos.Text.Trim() == String.Empty)
-            {
-                throw new Exception("Los apellidos del profesional son obligatorios.");
-            }
-            //Validar que este lleno el Sueldo
-            if (mskSueldo.Text.Trim() == String.Empty)
-            {
-                throw new Exception("El sueldo es obligatorio.");
-            }
-            //Validamos que el DNI este lleno
-            if (mskDni.MaskFull == false)
-            {
-                throw new Exception("El DNI debe de tener 8 caracteres.");
-            }
+                //Validar que este lleno el Id_Espec
+                if (cboEspecialidad.SelectedIndex == 0)
+                {
+                    throw new Exception("La especialidad es obligatoria.");
+                }
+                //Validar que este lleno el nombre
+                if (txtNombres.Text.Trim() == String.Empty)
+                {
+                    throw new Exception("El nombre del profesional es obligatorio.");
+                }
+                //Validar que este lleno el apellido
+                if (txtApellidos.Text.Trim() == String.Empty)
+                {
+                    throw new Exception("Los apellidos del profesional son obligatorios.");
+                }
+                //Validar que este lleno el Sueldo
+                if (mskSueldo.Text.Trim() == String.Empty)
+                {
+                    throw new Exception("El sueldo es obligatorio.");
+                }
+                //Validamos que el DNI este lleno
+                if (mskDni.MaskFull == false)
+                {
+                    throw new Exception("El DNI debe de tener 8 caracteres.");
+                }
 
 
-            //Pasamos los valores a las propiedades de la instancia...
-            objProfesionalBE.Id_Espec = Convert.ToInt16(cboEspecialidad.SelectedValue);
-            objProfesionalBE.Nom_pro = txtNombres.Text.Trim();
-            objProfesionalBE.Ape_pro = txtApellidos.Text.Trim();
-            objProfesionalBE.Sue_pro = Convert.ToSingle(mskSueldo.Text.Trim());
-            objProfesionalBE.Fech_ing = Convert.ToDateTime(mskFecIng.Text.Trim());
-            objProfesionalBE.Dni_pro = mskDni.Text.Trim();
-            objProfesionalBE.Email_pro = txtEmail.Text.Trim();
+                //Pasamos los valores a las propiedades de la instancia...
+                objProfesionalBE.Id_Espec = Convert.ToInt16(cboEspecialidad.SelectedValue);
+                objProfesionalBE.Nom_pro = txtNombres.Text.Trim();
+                objProfesionalBE.Ape_pro = txtApellidos.Text.Trim();
+                objProfesionalBE.Sue_pro = Convert.ToSingle(mskSueldo.Text.Trim());
+                objProfesionalBE.Fech_ing = Convert.ToDateTime(dtgFIng.Text.Trim());
+                objProfesionalBE.Dni_pro = mskDni.Text.Trim();
+                objProfesionalBE.Email_pro = txtEmail.Text.Trim();
 
-            objProfesionalBE.Usu_Registro = clsCredenciales.Usuario;
-            objProfesionalBE.Est_pro = Convert.ToInt16(chkEstado.Checked);
+                objProfesionalBE.Usu_Registro = clsCredenciales.Usuario;
+                objProfesionalBE.Est_pro = Convert.ToInt16(chkEstado.Checked);
 
-            //Invocamos al metodo insertar..
-            if (objProfesionalBL.InsertarProfesional(objProfesionalBE) == true)
-            {
-                this.Close();
+                //Invocamos al metodo insertar..
+                if (objProfesionalBL.InsertarProfesional(objProfesionalBE) == true)
+                {
+                    this.Close();
+                }
+                else
+                {
+                    throw new Exception("No se inserto el registro. Contacte con Administrador del Sistema.");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                throw new Exception("No se inserto el registro. Contacte con Administrador del Sistema.");
+
+                MessageBox.Show("Se ha producido el error: " + ex.Message);
             }
         }
 
@@ -91,6 +99,8 @@ namespace CentroEades_GUI
             cboEspecialidad.DataSource = dt;
             cboEspecialidad.DisplayMember = "Nom_Espec";
             cboEspecialidad.ValueMember = "Id_Espec";
+            //Restringimos la fecha minima a la fecha actual..
+            dtgFIng.MinDate = DateTime.Now;
         }
     }
 }

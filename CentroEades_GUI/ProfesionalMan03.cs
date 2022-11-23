@@ -48,7 +48,7 @@ namespace CentroEades_GUI
                 txtNombres.Text = objProfesionalBE.Nom_pro;
                 txtApellidos.Text = objProfesionalBE.Ape_pro;
                 mskSueldo.Text = Convert.ToString(objProfesionalBE.Sue_pro);
-                mskFecIng.Text = Convert.ToString(objProfesionalBE.Fech_ing);
+                dtpFIng.Text = Convert.ToString(objProfesionalBE.Fech_ing);
                 mskDni.Text = objProfesionalBE.Dni_pro;
                 txtEmail.Text = objProfesionalBE.Email_pro;
                 chkEstado.Checked = Convert.ToBoolean(objProfesionalBE.Est_pro);
@@ -91,7 +91,7 @@ namespace CentroEades_GUI
                 objProfesionalBE.Nom_pro= txtNombres.Text.Trim();
                 objProfesionalBE.Ape_pro = txtApellidos.Text.Trim();
                 objProfesionalBE.Sue_pro = Convert.ToSingle(mskSueldo.Text.Trim());
-                objProfesionalBE.Fech_ing = Convert.ToDateTime(mskFecIng.Text.Trim());
+                objProfesionalBE.Fech_ing = Convert.ToDateTime(dtpFIng.Text.Trim());
                 objProfesionalBE.Dni_pro = mskDni.Text.Trim();
                 objProfesionalBE.Email_pro = txtEmail.Text.Trim();
 
